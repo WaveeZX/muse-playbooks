@@ -246,7 +246,7 @@ footer .wrap{padding-bottom:20px}
  .menu-btn{display:inline-flex;margin-left:auto}
  .theme-toggle{margin-left:0;padding:6px 8px 6px 6px}.theme-toggle .lb-day,.theme-toggle .lb-night{font-size:12px}
  .search-btn{margin-left:0}.search-btn span{display:none}
- nav.main{display:none;order:10;width:100%;flex-direction:column;flex-wrap:nowrap;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;margin-top:2px;max-height:calc(100dvh - 92px);max-height:calc(100vh - 92px);overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;scrollbar-width:auto;scrollbar-color:var(--faint) var(--surface2);box-shadow:inset 0 -20px 18px -18px rgba(0,0,0,.5)}
+ nav.main{display:none;order:10;width:100%;flex-direction:column;flex-wrap:nowrap;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;margin-top:2px;max-height:calc(100vh - 92px);max-height:calc(100dvh - 92px);overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;scrollbar-width:auto;scrollbar-color:var(--faint) var(--surface2);box-shadow:inset 0 -20px 18px -18px rgba(0,0,0,.5)}
  nav.main.open{display:flex}
  nav.main a{display:flex;align-items:center;justify-content:space-between;padding:14px 13px;font-size:16px;border-radius:10px;min-height:48px}
  nav.main a::after{content:"→";color:var(--faint);font-family:var(--font-mono)}
@@ -1497,22 +1497,6 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
   function toggleMenu(){ var open=mainNav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", open?"true":"false"); menuBtn.setAttribute("aria-label", open?"Close site menu":"Open site menu"); }
   menuBtn.addEventListener("click",toggleMenu);
   mainNav.querySelectorAll("a").forEach(function(a){ a.addEventListener("click",closeMenu); });
-  // Menu touch scrolling — a swipe up / down anywhere on the menu itself scrolls it,
-  // not just dragging the scrollbar. Only engages when the menu actually overflows,
-  // and a swipe never triggers the link it happens to end on.
-  var navTouch=null, navSwiped=false;
-  mainNav.addEventListener("touchstart",function(e){
-    if(e.touches.length!==1 || mainNav.scrollHeight<=mainNav.clientHeight+1){ navTouch=null; return; }
-    navTouch={y:e.touches[0].clientY, top:mainNav.scrollTop}; navSwiped=false;
-  },{passive:true});
-  mainNav.addEventListener("touchmove",function(e){
-    if(!navTouch || e.touches.length!==1) return;
-    var dy=e.touches[0].clientY-navTouch.y;
-    if(Math.abs(dy)>6){ navSwiped=true; mainNav.scrollTop=navTouch.top-dy; if(e.cancelable) e.preventDefault(); }
-  },{passive:false});
-  mainNav.addEventListener("touchend",function(){ navTouch=null; });
-  mainNav.addEventListener("touchcancel",function(){ navTouch=null; navSwiped=false; });
-  mainNav.addEventListener("click",function(e){ if(navSwiped){ e.preventDefault(); e.stopPropagation(); navSwiped=false; } },true);
   window.addEventListener("hashchange",closeMenu);
   document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeMenu(); });
   document.addEventListener("click",function(e){ if(mainNav.classList.contains("open") && !e.target.closest(".topbar")) closeMenu(); });
