@@ -247,16 +247,16 @@ footer .wrap{padding-bottom:20px}
  .menu-btn{display:inline-flex;margin-left:auto}
  .theme-toggle{margin-left:0;padding:6px 8px 6px 6px}.theme-toggle .lb-day,.theme-toggle .lb-night{font-size:12px}
  .search-btn{margin-left:0}.search-btn span{display:none}
- nav.main{display:none;order:10;width:100%;flex-direction:column;flex-wrap:nowrap;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;margin-top:2px;max-height:calc(100vh - 92px);max-height:calc(100dvh - 92px);overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;scrollbar-width:auto;scrollbar-color:var(--faint) var(--surface2);box-shadow:inset 0 -20px 18px -18px rgba(0,0,0,.5)}
+ nav.main{display:none;order:10;width:100%;flex-direction:column;flex-wrap:nowrap;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;margin-top:2px;max-height:var(--nav-max-h,calc(100dvh - 92px));overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;scrollbar-width:auto;scrollbar-color:var(--faint) var(--surface2);box-shadow:inset 0 -20px 18px -18px rgba(0,0,0,.5)}
  nav.main.open{display:flex}
-                        nav.main{min-height:0;max-height:calc(100vh - 92px);max-height:calc(100dvh - 92px);max-height:calc(100svh - 92px);overflow-y:auto}
+                        nav.main{min-height:0;max-height:var(--nav-max-h,calc(100dvh - 92px));overflow-y:auto}
                         nav.main a{padding:10px 12px;font-size:15px;min-height:44px}
  nav.main a{display:flex;align-items:center;justify-content:space-between;padding:14px 13px;font-size:16px;border-radius:10px;min-height:48px}
  nav.main a::after{content:"→";color:var(--faint);font-family:var(--font-mono)}
  nav.main a[aria-current="page"]{background:var(--accent);color:var(--accent-ink)}
  nav.main a[aria-current="page"]::after{color:var(--accent-ink)}
  table,thead,tbody,tr,td{display:block;width:100%} thead{display:none} tr{background:var(--surface);border-top:1px solid var(--line);padding:10px 6px} td{border:none;padding:7px 14px} td::before{content:attr(data-label);display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint)} td:first-child{font-size:17px} td:first-child::before{display:none}}
-</style>
+@media(max-width:420px){nav.main{gap:0;padding:6px}nav.main a{padding:9px 13px}}</style>
 </head>
 <body>
 <canvas id="particles" aria-hidden="true"></canvas>
@@ -1496,14 +1496,14 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
 
   // Site menu — mobile menu button opens / closes the full menu
   var menuBtn=document.getElementById("menuBtn"), mainNav=document.getElementById("mainNav");
-  function closeMenu(){ mainNav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); menuBtn.setAttribute("aria-label","Open site menu"); }
-  function toggleMenu(){ var open=mainNav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", open?"true":"false"); menuBtn.setAttribute("aria-label", open?"Close site menu":"Open site menu"); }
+  function closeMenu(){ mainNav.style.removeProperty("--nav-max-h"); mainNav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); menuBtn.setAttribute("aria-label","Open site menu"); }
+  function fitMenu(){ if(!mainNav.classList.contains("open")) return; var vh=window.visualViewport?window.visualViewport.height:window.innerHeight; var h=Math.max(160,Math.floor(vh-mainNav.getBoundingClientRect().top-8)); mainNav.style.setProperty("--nav-max-h",h+"px"); } function refitMenu(){ if(mainNav.classList.contains("open")) requestAnimationFrame(fitMenu); } function toggleMenu(){ var open=mainNav.classList.toggle("open"); if(open){ requestAnimationFrame(fitMenu); } else { mainNav.style.removeProperty("--nav-max-h"); } menuBtn.setAttribute("aria-expanded", open?"true":"false"); menuBtn.setAttribute("aria-label", open?"Close site menu":"Open site menu"); }
   menuBtn.addEventListener("click",toggleMenu);
   mainNav.querySelectorAll("a").forEach(function(a){ a.addEventListener("click",closeMenu); });
   window.addEventListener("hashchange",closeMenu);
   document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeMenu(); });
   document.addEventListener("click",function(e){ if(mainNav.classList.contains("open") && !e.target.closest(".topbar")) closeMenu(); });
-  window.addEventListener("resize",function(){ if(window.innerWidth>860) closeMenu(); });
+  window.addEventListener("resize",function(){ if(window.innerWidth>860) closeMenu(); }); window.addEventListener("resize",refitMenu); window.addEventListener("orientationchange",refitMenu); if(window.visualViewport){ window.visualViewport.addEventListener("resize",refitMenu); }
 
   // Search / palette
   var index=[
