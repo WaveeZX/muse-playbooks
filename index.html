@@ -1474,7 +1474,7 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
 <script>
 (function(){
   var routes={
-    "":"home","/":"home","/quick-start":"quickstart","/new-to-muse":"new","/playbooks":"playbooks","/playbooks/job-hunt":"pb-job","/playbooks/kdp":"pb-kdp","/playbooks/adobe-stock":"pb-stock","/playbooks/local-services":"pb-local","/skills":"skills","/tasks":"tasks","/tools":"tools","/guides":"guides","/advanced-prompts":"advanced","/hustles":"hustles","/money-ops":"money","/track":"track","/news":"news"
+    "":"home","/":"home","ban-tracker":"news","/quick-start":"quickstart","/new-to-muse":"new","/playbooks":"playbooks","/playbooks/job-hunt":"pb-job","/playbooks/kdp":"pb-kdp","/playbooks/adobe-stock":"pb-stock","/playbooks/local-services":"pb-local","/skills":"skills","/tasks":"tasks","/tools":"tools","/guides":"guides","/advanced-prompts":"advanced","/hustles":"hustles","/money-ops":"money","/track":"track","/news":"news"
   };
   var navMap={home:"home",quickstart:"quickstart",new:"new",playbooks:"playbooks","pb-job":"playbooks","pb-kdp":"playbooks","pb-stock":"playbooks","pb-local":"playbooks",skills:"skills",tasks:"tasks",tools:"tools",guides:"guides",advanced:"advanced",hustles:"hustles",money:"money",track:"track",news:"news"};
   var pendingTaskFilter=null, pendingToolFilter=null, pendingGuideFilter=null;
@@ -1489,7 +1489,7 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
     if(id==="tasks" && pendingTaskFilter && typeof applyTaskFilter==="function"){ applyTaskFilter(pendingTaskFilter); pendingTaskFilter=null; }
     if(id==="tools" && pendingToolFilter && typeof applyToolFilter==="function"){ applyToolFilter(pendingToolFilter); pendingToolFilter=null; }
     if(id==="guides" && pendingGuideFilter && typeof applyGuideFilter==="function"){ applyGuideFilter(pendingGuideFilter); pendingGuideFilter=null; }
-    window.scrollTo(0,0);
+    if(h==="ban-tracker"){var bt=document.getElementById("ban-tracker");if(bt){window.scrollTo(0,bt.getBoundingClientRect().top+window.scrollY-90);return;}} window.scrollTo(0,0);
   }
   window.addEventListener("hashchange",route); route();
 
