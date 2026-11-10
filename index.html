@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="/favicon.png">
   <title>Muse Playbooks — Playbooks, Skills & Hustles for Building With Muse</title>
 <meta name="description" content="Muse Playbooks is an independent community resource: playbooks, skills, hustle comparisons and field notes for using Muse to earn, learn and ship side projects.">
-  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://museplaybooks.com/"><meta name="google-site-verification" content="CVVe-gVi_o0bMVHZgj02dNs7KEDuvbNRVl4yiqG9bj4"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Muse Playbooks","url":"https://museplaybooks.com/","sameAs":["https://www.instagram.com/museplaybooks","https://www.facebook.com/profile.php?id=61596452121451"]},{"@type":"WebSite","name":"Muse Playbooks","url":"https://museplaybooks.com/"}]}</script><meta property="og:type" content="website">
   <meta property="og:url" content="https://museplaybooks.com/">
   <meta property="og:title" content="Muse Playbooks">
   <meta property="og:description" content="Playbooks, Skills and Hustles for Building With Muse AI">
@@ -345,7 +345,7 @@ Menu
 <section class="section"><p class="kicker">Featured</p><h2>Start with one lane</h2>
 <div class="grid2">
 <a class="card" href="#/playbooks/job-hunt"><h3>Job Hunt — Any Work Type</h3><p>Remote, hybrid or onsite. Set a pay floor, verify on the employer's own page, QC before you submit. Never guess a screening answer.</p><div class="arrow">Run this playbook →</div></a>
-<a class="card" href="#/playbooks/kdp"><h3>KDP Puzzle Books</h3><p>Test demand before you build. Solver-checked puzzles, thumbnail-first covers, and a strict niche test.</p><div class="arrow">Run this playbook →</div></a>
+<a class="card" href="/playbooks/upwork-mcp/"><span class="meta">Freelance · Week 1</span><h3>Upwork MCP Playbook</h3><p>Connect Muse to Upwork with the official Upwork MCP and upwork-mcp-cli — and what to do when the browser is blocked by Cloudflare. One proposal sent at $55/hr.</p><div class="arrow">Open →</div></a><a class="card" href="#/playbooks/kdp"><h3>KDP Puzzle Books</h3><p>Test demand before you build. Solver-checked puzzles, thumbnail-first covers, and a strict niche test.</p><div class="arrow">Run this playbook →</div></a>
 </div></section>
 
 <section class="section"><p class="kicker">FAQ</p><h2>Plain questions, plain answers</h2>
@@ -460,10 +460,10 @@ Menu
 
 <!-- PLAYBOOKS DIRECTORY -->
 <main class="view" id="view-playbooks">
-<a class="back" href="#/">← Home</a><p class="kicker" style="margin-top:16px">Directory</p><h2>Playbooks</h2><p class="lead">Four tested methods. Each one is its own page with full steps, a QC check, a kill rule, a deep dive with templates and numbers, and a Verified in the wild section covering what other Muse users have done — labeled tested, reported, or announced.</p>
+<a class="back" href="#/">← Home</a><p class="kicker" style="margin-top:16px">Directory</p><h2>Playbooks</h2><p class="lead">Five tested methods. Each one is its own page with full steps, a QC check, a kill rule, a deep dive with templates and numbers, and a Verified in the wild section covering what other Muse users have done — labeled tested, reported, or announced.</p>
 <div class="grid2">
 <a class="card" href="#/playbooks/job-hunt"><span class="meta">Career</span><h3>Job Hunt — Any Work Type</h3><p>Remote, hybrid or onsite. Pay floor first, total-pay comparison, QC before every submit.</p><div class="arrow">Open →</div></a>
-<a class="card" href="#/playbooks/kdp"><span class="meta">Publishing</span><h3>KDP Puzzle Books</h3><p>Validate the niche with sales-rank tests, build solver-checked books, design for the thumbnail.</p><div class="arrow">Open →</div></a>
+<a class="card" href="/playbooks/upwork-mcp/"><span class="meta">Freelance · Week 1</span><h3>Upwork MCP Playbook</h3><p>Connect Muse to Upwork with the official Upwork MCP and upwork-mcp-cli — and what to do when the browser is blocked by Cloudflare. One proposal sent at $55/hr.</p><div class="arrow">Open →</div></a><a class="card" href="#/playbooks/kdp"><span class="meta">Publishing</span><h3>KDP Puzzle Books</h3><p>Validate the niche with sales-rank tests, build solver-checked books, design for the thumbnail.</p><div class="arrow">Open →</div></a>
 <a class="card" href="#/playbooks/adobe-stock"><span class="meta">Creative</span><h3>Adobe Stock Batches</h3><p>Small weekly batches, 100% zoom QC, and a clean CSV pipeline for titles and keywords.</p><div class="arrow">Open →</div></a>
 <a class="card" href="#/playbooks/local-services"><span class="meta">Local</span><h3>Local Services</h3><p>Proof first, quote before work, deposit up front, and one review ask after a finished job.</p><div class="arrow">Open →</div></a>
 </div></main>
@@ -1478,7 +1478,7 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
   };
   var navMap={home:"home",quickstart:"quickstart",new:"new",playbooks:"playbooks","pb-job":"playbooks","pb-kdp":"playbooks","pb-stock":"playbooks","pb-local":"playbooks",skills:"skills",tasks:"tasks",tools:"tools",guides:"guides",advanced:"advanced",hustles:"hustles",money:"money",track:"track",news:"news"};
   var pendingTaskFilter=null, pendingToolFilter=null, pendingGuideFilter=null;
-  function route(){
+  function route(){if(location.hash==="#/playbooks/upwork-mcp"||location.hash==="#/playbooks/upwork-mcp/"){location.replace("/playbooks/upwork-mcp/");return}
     var h=location.hash.replace(/^#/,""); if(!h) h="/";
     var qi=h.indexOf("?"); if(qi>-1){ var qs=h.slice(qi+1); h=h.slice(0,qi); qs.split("&").forEach(function(pair){ var kv=pair.split("="); if(kv[0]==="filter"){ var f=decodeURIComponent(kv[1]||"all"); pendingTaskFilter=f; pendingToolFilter=f; pendingGuideFilter=f; } }); }
     if(h.length>1 && h.endsWith("/")) h=h.slice(0,-1);
@@ -1525,7 +1525,7 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
     {t:"New to Muse: interactive first week checklist — tick off Days 1 to 7",h:"#/new-to-muse"},
     {t:"New to Muse — what Muse, a playbook and a skill are",h:"#/new-to-muse"},
     {t:"Playbooks directory",h:"#/playbooks"},
-    {t:"Playbook: Job Hunt — Any Work Type",h:"#/playbooks/job-hunt"},
+    {t:"Playbook: Job Hunt — Any Work Type",h:"#/playbooks/job-hunt"},{t:"Playbook: Upwork MCP — Connect Muse to Upwork the Official Way",h:"/playbooks/upwork-mcp/"},{t:"Muse News — Daily News, Ban Tracker & Field Discoveries",h:"/news/"},
     {t:"Playbook: KDP Puzzle Books",h:"#/playbooks/kdp"},
     {t:"Playbook: Adobe Stock Batches",h:"#/playbooks/adobe-stock"},
     {t:"Playbook: Local Services",h:"#/playbooks/local-services"},
