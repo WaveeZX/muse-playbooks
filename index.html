@@ -1489,7 +1489,7 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
     if(id==="tasks" && pendingTaskFilter && typeof applyTaskFilter==="function"){ applyTaskFilter(pendingTaskFilter); pendingTaskFilter=null; }
     if(id==="tools" && pendingToolFilter && typeof applyToolFilter==="function"){ applyToolFilter(pendingToolFilter); pendingToolFilter=null; }
     if(id==="guides" && pendingGuideFilter && typeof applyGuideFilter==="function"){ applyGuideFilter(pendingGuideFilter); pendingGuideFilter=null; }
-    if(h==="ban-tracker"){var bt=document.getElementById("ban-tracker");if(bt){window.scrollTo(0,bt.getBoundingClientRect().top+window.scrollY-90);return;}} window.scrollTo(0,0);
+    if(h==="ban-tracker"){var bt=document.getElementById("ban-tracker");if(bt){var tb=document.querySelector(".topbar");window.scrollTo(0,bt.getBoundingClientRect().top+window.scrollY-(tb?tb.getBoundingClientRect().height+12:90));return;}} window.scrollTo(0,0);
   }
   window.addEventListener("hashchange",route); route();
 
