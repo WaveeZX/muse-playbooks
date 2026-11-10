@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upwork MCP Playbook — Connect Muse to Upwork the Official Way | Muse Playbooks</title>
+<meta name="description" content="Week 1: connect Muse to Upwork with the official Upwork MCP and upwork-mcp-cli, what to do when Muse's browser is blocked by Cloudflare, and the workarounds to try — in order. A proposal was sent at $55/hr. No income is promised.">
+<link rel="canonical" href="https://museplaybooks.com/playbooks/upwork-mcp/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://museplaybooks.com/playbooks/upwork-mcp/">
+<meta property="og:title" content="Upwork MCP Playbook — Connect Muse to Upwork the Official Way">
+<meta property="og:description" content="Use the official Upwork MCP and upwork-mcp-cli, handle the Cloudflare browser block, and try the workarounds in order. Week 1 field test: one proposal sent at $55/hr.">
+<meta property="og:image" content="https://museplaybooks.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Upwork MCP Playbook — Connect Muse to Upwork the Official Way">
+<meta name="twitter:description" content="Use the official Upwork MCP and upwork-mcp-cli, handle the Cloudflare browser block, and try the workarounds in order. Week 1 field test: one proposal sent at $55/hr.">
+<meta name="twitter:image" content="https://museplaybooks.com/og-image.jpg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Upwork MCP Playbook — Connect Muse to Upwork the Official Way",
+  "description": "Week 1: connect Muse to Upwork with the official Upwork MCP and upwork-mcp-cli, what to do when Muse's browser is blocked by Cloudflare, and the workarounds to try — in order. A proposal was sent at $55/hr. No income is promised.",
+  "url": "https://museplaybooks.com/playbooks/upwork-mcp/",
+  "datePublished": "2026-11-10",
+  "dateModified": "2026-11-10",
+  "author": {"@type": "Organization", "name": "Muse Playbooks", "url": "https://museplaybooks.com/"},
+  "publisher": {"@type": "Organization", "name": "Muse Playbooks", "url": "https://museplaybooks.com/"},
+  "mainEntityOfPage": "https://museplaybooks.com/playbooks/upwork-mcp/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museplaybooks.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Playbooks", "item": "https://museplaybooks.com/#playbooks"},
+    {"@type": "ListItem", "position": 3, "name": "Upwork MCP Playbook", "item": "https://museplaybooks.com/playbooks/upwork-mcp/"}
+  ]
+}
+</script>
+<style>
+:root{--bg:#070b13;--bg2:#0a101c;--surface:#0f1726;--line:#23344d;--text:#edf3ff;--muted:#9dbc8c;--accent:#22d3ee;--accent2:#ff9a3c;--font-display:"Archivo",system-ui,sans-serif;--font-body:"Inter",system-ui,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.65}
+a{color:inherit}.topbar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.topbar-in{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}.logo{font-family:var(--font-display);font-weight:900;letter-spacing:-.03em;font-size:24px;text-decoration:none}.logo em{font-style:normal;color:var(--accent)}nav{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--text)}.btn{margin-left:auto;background:var(--accent);color:#03141d;font-weight:700;padding:9px 16px;border-radius:999px;text-decoration:none;white-space:nowrap}.wrap{max-width:820px;margin:0 auto;padding:44px 20px 80px}.crumb{font-family:var(--font-mono);font-size:13px;color:var(--muted)}.crumb a{color:var(--muted);text-decoration:none}.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:26px 0 10px}h1{font-family:var(--font-display);font-size:clamp(34px,6vw,56px);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px}h2{font-family:var(--font-display);font-size:27px;letter-spacing:-.02em;margin:38px 0 10px}h3{font-family:var(--font-display);font-size:20px;margin:26px 0 8px}.lede{font-size:20px;color:#c6d4e8;margin:0 0 22px}p{margin:0 0 16px}ul,ol{margin:0 0 18px;padding-left:24px}li{margin:6px 0}.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;margin:22px 0}.callout{border:1px solid var(--accent);border-radius:14px;padding:18px 20px;margin:22px 0;background:#0b2230}.warn{border:1px solid #ff6b6b;border-radius:14px;padding:18px 20px;margin:22px 0;background:#2a1214}.callout b,.warn b{display:block;margin-bottom:6px}code{font-family:var(--font-mono);font-size:.92em;background:#162032;padding:2px 6px;border-radius:6px}.steps{counter-reset:s;list-style:none;padding:0}.steps li{counter-increment:s;position:relative;padding:0 0 18px 46px}.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--accent);color:#03141d;font-family:var(--font-display);font-weight:800;display:grid;place-items:center}.steps li b{display:block;font-family:var(--font-display);font-size:19px;margin-bottom:4px}.check{list-style:none;padding:0}.check li{padding-left:28px;position:relative}.check li::before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:700}form{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}input[type=email]{flex:1;min-width:240px;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font:inherit}button{padding:12px 18px;border-radius:10px;border:0;background:var(--accent);color:#03141d;font-weight:700;font:inherit;cursor:pointer}.small{font-size:13px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:28px 20px 60px;color:var(--muted);font-size:14px}.foot-in{max-width:820px;margin:0 auto}footer a{color:var(--text)}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in"><a class="logo" href="https://museplaybooks.com/">MUSE <em>PLAYBOOKS</em></a><nav><a href="https://museplaybooks.com/">Home</a><a href="https://museplaybooks.com/#playbooks">Playbooks</a><a href="/playbooks/job-hunt/">Job Hunt</a><a href="/news/">News</a><a href="https://museplaybooks.com/#ban-tracker">Ban Tracker</a></nav><a class="btn" href="https://museplaybooks.com/#weekly-letter">Subscribe — Free</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://museplaybooks.com/">Home</a> / <a href="https://museplaybooks.com/#playbooks">Playbooks</a> / Upwork MCP</p>
+<p class="eyebrow">Week 1 · Playbook · November 10, 2026</p>
+<h1>Upwork MCP Playbook</h1>
+<p class="lede">Connect Muse to Upwork the official way — with the official Upwork MCP and <code>upwork-mcp-cli</code> — and know exactly what to do when the browser gets blocked.</p>
+<div class="callout"><b>The result, up front</b>In the Week 1 field test, this route got a proposal out the door: one proposal sent at $55/hr. That is the result so far — one proposal sent. It is not a hire, not a contract, and not income.</div>
+<h2>What this playbook is</h2>
+<p>This is the first Muse Playbooks field test, from the Week 1 letter. The goal was simple: use Muse to find and apply for real Upwork work, using Upwork's own tooling instead of a third-party scraper or a hacked-together workaround. Everything below is what actually happened, in the order it happened — including the part that broke.</p>
+<h2>Step 1 — Start with the official Upwork MCP</h2>
+<p>Use the official Upwork MCP. That is the supported way to connect an AI assistant to Upwork: it is Upwork's own server, it speaks the Model Context Protocol, and it is the connection to set up first. Do not start with an unofficial scraper, a browser automation script, or a random third-party Upwork tool — those are the routes that get accounts flagged and blocked.</p>
+<p>Set it up through Muse's MCP configuration, following Upwork's official MCP instructions, and confirm the connection works before you ask Muse to do anything with it. If the official MCP is not available or not working for your account, stop there and move to Step 2 — do not jump straight to the browser.</p>
+<h2>Step 2 — Use <code>upwork-mcp-cli</code></h2>
+<p><code>upwork-mcp-cli</code> is the command-line way to work with the Upwork MCP. Use it when you want a direct, repeatable connection to Upwork from the terminal instead of going through a browser session — for example, to check jobs and prepare a proposal with Muse, from the command line, with the official MCP behind it.</p>
+<p>Keep it simple: one connection, the official one, wired into Muse. If the CLI connection works, do your Upwork work through it. If it does not, move to the workarounds below — in order.</p>
+<h2>The block: Muse's browser was blocked by Cloudflare</h2>
+<p>When Muse tried to open Upwork in the browser, Upwork was blocked by Cloudflare. The browser route stopped there. Cloudflare is Upwork's bot protection doing its job: it could not tell Muse's browser session apart from automated traffic, so it refused the page.</p>
+<p>That block is not a puzzle to solve. It is a signal to change routes — back to the official MCP and CLI above, or to doing the blocked step yourself, below.</p>
+<h2>Workarounds — try them in this order</h2>
+<ol class="steps">
+<li><b>Official Upwork MCP</b>Connect Muse to Upwork through the official MCP first. This is the intended route, and the one most likely to keep working.</li>
+<li><b><code>upwork-mcp-cli</code></b>If the MCP connection is not working in Muse directly, try the CLI route. Same official MCP, different way in.</li>
+<li><b>Do the blocked step yourself</b>Open the job on Upwork yourself, in your own browser. Read the job post, then paste the job details into Muse and draft the proposal there. The human opens the page; Muse does the drafting. Nothing is automated around the block.</li>
+<li><b>Draft with Muse, send it yourself</b>Let Muse help you write and check the proposal, then submit it from your own Upwork account. You stay the one who sends it.</li>
+<li><b>Stop at a confirmed block</b>If a platform confirms you are blocked, stop. Do not use bypass tools, do not retry in a loop, and do not switch to a scraper. Use the official route, or do it by hand.</li>
+</ol>
+<h2>The proposal: $55/hr</h2>
+<p>Using this route, the Week 1 field test sent one proposal at $55/hr. The rate was set for that job, for that proposal — it is not a recommended rate for every job, and it is not a promise about what any proposal will earn. Set your own rate per job, based on the work, the client, and what you can deliver.</p>
+<h2>Before you send: the quick check</h2>
+<ul class="check">
+<li>Read the whole job post — not just the title and the budget.</li>
+<li>Confirm the rate, the scope, and what the client is actually asking for.</li>
+<li>Check the client's history and reviews before you apply.</li>
+<li>Make the proposal about their problem, in their words — not about Muse.</li>
+<li>Send it yourself, from your own Upwork account, and keep a copy.</li>
+</ul>
+<div class="warn"><b>No money promise</b>This playbook shows a method that sent one proposal at $55/hr. It does not promise income, hires, or contracts. Results depend on the job, the client, and the work — and this field test is one proposal, not a track record.</div>
+<h2>Keep going</h2>
+<p>The full job-hunting system — how to pick jobs, what to send, and when to stop — is in the <a href="/playbooks/job-hunt/">Job Hunt playbook</a>. For what changed in Muse this week, see <a href="/news/">Muse news</a>, and for the ban and block status, the <a href="https://museplaybooks.com/#ban-tracker">Ban Tracker</a>.</p>
+<div class="card"><h3 style="margin-top:0">The weekly letter</h3><p>One field test a week, in plain language. Free. No spam.</p><form action="https://buttondown.com/api/emails/embed-subscribe/museplaybooks" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/museplaybooks','popupwindow')"><label class="small" for="bd-email">Email address</label><input type="email" id="bd-email" name="email" placeholder="you@example.com" required><button type="submit">Get the letter</button></form><p class="small">Powered by Buttondown. We don't sell your data. Unsubscribe anytime.</p></div>
+<p class="small">Published November 10, 2026. Muse Playbooks is an independent community resource: playbooks, skills, hustle comparisons and field notes for using Muse to earn, learn and ship side projects. Muse Playbooks is not affiliated with or endorsed by Upwork or Meta. Free forever. Built on Muse. When a platform blocks you, stop — no workaround is worth losing your account.</p>
+</main>
+<footer><div class="foot-in"><p><strong style="color:var(--text)">Muse Playbooks</strong> — Playbooks, Skills &amp; Hustles for Building With Muse</p><p><a href="https://tally.so/r/4aBgRB">Contact</a> · <a href="https://tally.so/r/vXrZM8">Feedback</a> · <a href="https://www.instagram.com/museplaybooks">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61596452121451">Facebook</a> · <a href="https://museplaybooks.com/#ban-tracker">Ban Tracker</a></p><p class="small">Muse Playbooks is an independent community resource. Not affiliated with or endorsed by Meta. © 2026 Muse Playbooks.</p></div></footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70f2180f354640a29dce19429dd7781e"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
