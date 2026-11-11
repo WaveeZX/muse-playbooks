@@ -1,0 +1,27 @@
+# Muse Playbooks
+
+> Muse Playbooks turns real experiments with Meta Muse into reusable playbooks for job hunting, freelance work, digital products and local services. Every method comes with steps, a quality check and a kill rule. Independent community resource. Not affiliated with or endorsed by Meta.
+
+## Start here
+- [New to Muse](https://museplaybooks.com/#new-to-muse): what Muse is, what a playbook and a skill are, how to get access, 4 steps to a first useful result.
+- [Start here in 10 minutes](https://museplaybooks.com/#fast-start): pick a lane, learn playbook vs skill, run one playbook and ship one thing.
+- [Weekly Letter](https://museplaybooks.com/#weekly-letter): Have your AI work for you. The prompt that works, what worked, what did not, and the workaround, in two minutes. Free to join.
+
+## Playbooks
+- [Job Hunt](https://museplaybooks.com/#playbooks): use Muse to search job sites, tailor applications, track applications, and prepare for interviews. QC every application before submit. No invented claims.
+- [KDP Puzzle Books](https://museplaybooks.com/#playbooks): solver-checked word search and word fill-in books. Validate a niche with live Amazon BSR first, publish one proof of concept, build more only if it gets traction.
+- [Adobe Stock](https://museplaybooks.com/#playbooks): weekly AI image batches with Adobe-ready titles and keywords, 100 percent zoom QC, CSV metadata.
+- [Local Services](https://museplaybooks.com/#playbooks): use Muse to run a local tech help business, from booking to follow up, with approval before anything sends.
+
+## Tools, Skills, and Money
+- [Tasks](https://museplaybooks.com/#tasks): copyable prompts by category, with a boundary and a QC check on each one.
+- [Skills Library](https://museplaybooks.com/#skills): 7 reusable skills that save setup work on repeat jobs.
+- [Hustles and Money](https://museplaybooks.com/#hustles): compare hustles by expected dollars, time to first dollar, and hours per week. If a lane misses its kill rule, stop.
+- [Crons and Dashboards](https://museplaybooks.com/#crons): one tracker per lane, one pinned dashboard, a scheduled job that reconciles it.
+- [Money Ops](https://museplaybooks.com/#money-ops): keep one ledger per business, log payments the day they happen, hold a tax set-aside.
+
+## Rules for Muse
+- Give Muse a job with a clear outcome, constraints, and what good looks like.
+- Drafts, proposals, and applications are staged for approval. Approval is per action.
+- Check every output in the original source before you use it.
+- If a claim cannot be sourced, label it Reported or Announced, or leave it out.
