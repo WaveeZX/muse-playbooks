@@ -12,6 +12,7 @@
 - [KDP Puzzle Books](https://museplaybooks.com/#playbooks): solver-checked word search and word fill-in books. Validate a niche with live Amazon BSR first, publish one proof of concept, build more only if it gets traction.
 - [Adobe Stock](https://museplaybooks.com/#playbooks): weekly AI image batches with Adobe-ready titles and keywords, 100 percent zoom QC, CSV metadata.
 - [Local Services](https://museplaybooks.com/#playbooks): use Muse to run a local tech help business, from booking to follow up, with approval before anything sends.
+- [Upwork MCP](https://museplaybooks.com/playbooks/upwork-mcp/): connect Muse to Upwork the official way, with the official Upwork MCP and upwork-mcp-cli, and what to do when the browser is blocked by Cloudflare.
 
 ## Tools, Skills, and Money
 - [Tasks](https://museplaybooks.com/#tasks): copyable prompts by category, with a boundary and a QC check on each one.
