@@ -482,257 +482,56 @@ Menu
 
 <!-- ADVANCED PROMPTS -->
 <main class="view" id="view-advanced">
-<a class="back" href="#/">← Home</a><p class="kicker" style="margin-top:16px">For experienced users</p><h2>Advanced Prompts</h2><p class="lead">Full-length prompts with the context, phases, scoring, output format and QC gates built in. Replace every [bracket] with your real inputs before you run one. Step-by-step guides are below the prompts.</p>
+<a class="back" href="#/">← Home</a><p class="kicker" style="margin-top:16px">For experienced users</p><h2>Advanced Prompts</h2><p class="lead">The full prompts live in the letter, one lane a week. The site shows what each prompt does, not the prompt itself. Join the letter to get this week's prompt.</p>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">CAREER</span><h3>Job Hunt — Full Pipeline</h3><p>Score, verify, tailor and QC multiple applications in one run, under a no-guessing rule.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> your resume, pay floor, work type, and standing screening answers.</p>
-<div class="prompt-box adv"><span>Act as a senior job search strategist and application QC reviewer. Work in phases and do not skip ahead.
-
-MY INPUTS
-- Resume: [paste full resume]
-- Pay floor: [$ amount] — drop anything below it without discussion
-- Work type: [remote / hybrid / onsite + location or time zone]
-- Must-haves: [benefits, schedule, industry limits]
-- Standing screening answers: [work authorization, sponsorship, clearance, earliest start date, reason for leaving]
-
-PHASE 1 — SCORE (do not draft anything yet)
-Score every role I give you out of 100: skills match 40, pay vs floor 25, work-type fit 15, growth 10, red flags minus 10 each (vague pay, reposted 3+ times, duties far outside the title). Output a ranked table: Role | Score | Best evidence from my resume | Biggest gap | Verdict: apply / stretch / skip.
-
-PHASE 2 — VERIFY
-For apply verdicts only, check the employer's own careers page. Confirm title, pay range, work type and closing date. Flag anything the aggregator listing got wrong.
-
-PHASE 3 — TAILOR
-Draft the application using only facts from my resume, reframed in the posting's language. Map each requirement to my proof in a side table. Invent nothing: no employers, dates, metrics, tools or certifications I do not have. Certifications in progress are written as in progress.
-
-PHASE 4 — QC GATE
-Re-check name, contact, work history, education, salary, and the exact company and title. List every screening question my standing answers do not cover and STOP — I answer those, you never guess.
-
-DELIVER: ranked table, tailored draft, requirement-to-proof map, QC report, and my top 3 next actions.</span><button class="copy-btn">Copy</button></div>
+<p>Scores every role against your floor, verifies it on the employer's own page, tailors the application, and runs a QC gate before anything goes out.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">FREELANCE</span><h3>Freelance Proposal — Fit Check to Final Draft</h3><p>Scores the job post first, turns ambiguities into questions, then writes a proposal a busy client can approve in one read.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the full job post, your 2–3 closest proof samples, your price, and your scope cap in hours.</p>
-<div class="prompt-box adv"><span>Act as a freelance proposal strategist for documentation and SOP work. Goal: a proposal a busy client can approve in one read.
-
-INPUTS
-- Job post: [paste full post]
-- My proof: [2–3 closest samples or results]
-- Price: [fixed price or rate] — Scope cap: [hours] max
-
-STEP 1 — FIT CHECK
-Score the post out of 100: skill match, scope clarity, budget fit, client signals (work history, payment verified, specific vs vague). Under 60, tell me to pass and why, in 3 lines max.
-
-STEP 2 — GAP LIST
-List every ambiguity that changes price or timeline (page count, source material quality, review rounds, tools, deadline). Turn each into ONE clarifying question I can paste. Do not assume answers.
-
-STEP 3 — PROPOSAL (my voice: short, plain, no corporate filler)
-1) Open on THEIR problem in one sentence, taken from the post.
-2) Proof: the closest sample plus one measurable result.
-3) Plan: deliverable, format, milestones, what I need from them.
-4) Price: the fixed scope at [amount]; what is NOT included, priced separately.
-5) Close: one clear next step and a start date.
-
-STEP 4 — RISK PASS
-Flag scope-creep traps in the post, rewrite any promise I cannot keep, and cut every sentence that sounds like a template.
-
-DELIVER: fit score, gap questions, the final proposal under 250 words, and an 80-word version for quick-apply forms. Stage everything — do not send.</span><button class="copy-btn">Copy</button></div>
+<p>Checks fit, lists the gaps that change price or timeline, drafts the proposal in your voice, and flags scope-creep traps.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">PUBLISHING</span><h3>KDP — Validate, Spec, Metadata, Launch QC</h3><p>The whole book pipeline in one prompt, with a hard validation gate before any building starts.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the theme, the audience, and the format (for example, large-print word search).</p>
-<div class="prompt-box adv"><span>Act as a KDP publishing analyst and production lead. No building until validation passes. Work in phases.
-
-THEME: [theme / audience / format]
-
-PHASE 1 — VALIDATE
-Find the top 10 competing titles. For each: Best Sellers Rank, price, review count, publication date, publisher type (independent or house). PASS only if most of the top 5 rank under 100,000 AND at least 3 titles are recent with real reviews. One hit among dead titles = FAIL (luck, not a niche). Label any third-party sales figure as a model estimate, not verified sales. Verdict first, evidence table second. If FAIL, stop and give me 3 adjacent themes worth testing instead.
-
-PHASE 2 — SPEC (only after PASS)
-Write the full build spec: trim size, page count, puzzle count and difficulty curve, solution pages, margins and bleed, interior rules (solver-verified 100%, no exceptions). Cover brief: title readable at 200px wide, one clear theme image, high contrast, badges (puzzle count, Large Print) placed to survive the thumbnail crop.
-
-PHASE 3 — METADATA
-Title and subtitle using the search terms buyers actually type, 7 backend keyword phrases, 2 categories, and a description that states contents, count and who it is for — no hype words, no unprovable claims.
-
-PHASE 4 — PRE-LAUNCH QC
-Checklist: solver pass on 100% of puzzles, the exported file read page by page (instructions page in full), thumbnail test passed, AI-content disclosure answered accurately for each element.
-
-DELIVER: verdict with evidence, build spec, metadata pack, QC checklist with pass / fail per line.</span><button class="copy-btn">Copy</button></div>
+<p>Validates the theme, writes the build spec, packs the metadata, and runs a pre-launch QC pass.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">CREATIVE</span><h3>Adobe Stock — Batch System</h3><p>Matrix planning, a scored 100% zoom QC rubric, and the upload CSV, run as one batch process.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> subjects, settings, styles, and the batch cap (20 is the standard ceiling).</p>
-<div class="prompt-box adv"><span>Act as a stock media producer running a weekly batch system. Consistency and QC beat volume.
-
-BATCH INPUTS
-- Subjects: [list] — Settings: [list] — Styles: [list]
-- Cap: 20 assets this session
-
-STEP 1 — MATRIX
-Build the subject x setting x style matrix. Fill cells to cover buyer demand, and mark near-duplicates before generating — assets in one batch must not compete with each other in search.
-
-STEP 2 — GENERATE TO THE MATRIX
-One asset per planned cell. Keep a manifest as you go: filename, cell, prompt used.
-
-STEP 3 — QC AT 100% ZOOM (score every asset)
-Rubric per asset: anatomy and hands, text artifacts, edges, lighting logic, commercial usability. Score out of 10. 8+ ships, 6–7 gets one fix attempt, under 6 is rejected and logged with the reason. No thumbnail approvals.
-
-STEP 4 — METADATA CSV
-Output CSV columns exactly: filename, title, keywords, category. Titles written the way a buyer searches (subject + setting + use). 15–25 relevant keywords per asset, ordered by importance. No stuffing, no brand names.
-
-STEP 5 — BATCH REPORT
-Shipped / fixed / rejected counts, rejection patterns, and one change for the next batch. Track per-category results across batches: two flat batches in a category = rotate it out.
-
-DELIVER: matrix, manifest, per-asset QC scores, upload-ready CSV, batch report.</span><button class="copy-btn">Copy</button></div>
+<p>Plans the batch matrix, generates to it, scores every asset at full size, and outputs the metadata and batch report.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">LOCAL</span><h3>Local Services — Intake to Review</h3><p>Scope check, written quote, booking messages and the one-time review ask, all under your service rules.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> services offered, out-of-scope list, service area, deposit, and both review links.</p>
-<div class="prompt-box adv"><span>Act as an operations assistant for a local services business. Everything in writing, nothing assumed.
-
-MY RULES
-- Services offered: [list] — Out of scope: [list — these get an honest pointer, never a pitch]
-- Service area: [towns] — Deposit: [amount or %] — Review links: [Google + community]
-
-JOB INTAKE — for each inquiry give me:
-1) In scope or out, with the one-line reason.
-2) The missing information that changes the quote, as short questions to ask the customer.
-3) A flat quote in writing: job, price, deposit, what is included, what is NOT included, parts policy (who buys; any sourcing fee agreed BEFORE purchase), timing.
-
-BOOKING BLOCK
-A confirmation message (short, plain, human), a day-before reminder, and the post-job summary template: what was done, what to watch, follow-up terms if any.
-
-REVIEW + REFERRAL (after a finished, happy job only)
-One message containing BOTH review links. Check my reviewed list first: anyone who already reviewed gets no second ask, ever. Then draft partner outreach ONLY for businesses whose public pages visibly lack what I sell — need, not want.
-
-WEEKLY WRAP
-Jobs quoted / booked / done, dollars per job type, no-shows, and the one fix for next week.
-
-DELIVER each piece ready to copy. Draft and stage everything — nothing sends without my explicit go for that message.</span><button class="copy-btn">Copy</button></div>
+<p>Runs intake, written quotes, booking messages, the one-time review ask, and the weekly wrap.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">DOCUMENTS</span><h3>SOP / KBA — Production Document</h3><p>A full document build with a fixed structure, strict sourcing rules, and a QC pass reported line by line.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the task, audience, source material, system and version, and the format you need.</p>
-<div class="prompt-box adv"><span>Act as a senior technical writer producing a client-ready SOP / knowledge base article. My standard: a new hire can complete the task using only this document.
-
-INPUTS
-- Task: [task] — Audience: [role + skill level] — Source material: [paste notes, tickets, screenshot list]
-- System + version: [name] — Format: [KBA / SOP / training guide]
-
-STRUCTURE (use exactly this)
-1) Purpose — what this achieves, in 2 sentences.
-2) Audience + prerequisites — accounts, access, tools, before-you-start checks.
-3) Procedure — numbered steps, one action per step, exact UI labels in bold, the expected result after any step where the user could go wrong.
-4) Exceptions — the 3 most likely errors, what each one looks like, and the fix.
-5) Escalation — when to stop and who gets it next, with what information attached.
-6) Version block — owner, date, version, what changed.
-
-WRITING RULES
-Plain language, second person, present tense. No step may rely on "as shown above" or knowledge the reader has not been given. Every name, label and number must come from the source material — flag gaps as [MISSING: ...] instead of inventing them.
-
-QC PASS (run it and report the result)
-Step count vs source coverage, UI labels match the real system, no invented claims, reading level fits the audience, formatting preserved (headings, tables, callouts) because the formatting is part of the deliverable.
-
-DELIVER: the finished document, the gap list, and the QC report.</span><button class="copy-btn">Copy</button></div>
+<p>Turns notes into a client-ready SOP or knowledge-base article, with a QC pass.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">RESEARCH</span><h3>Research — Decision Memo</h3><p>Evidence with sources and dates, bull case vs bear case, unit economics, and a kill metric set before you start.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the idea, niche or purchase you are deciding on.</p>
-<div class="prompt-box adv"><span>Act as a research analyst. I am deciding whether to spend time or money on [idea / niche / purchase]. Give me a decision memo I can act on, not a summary.
-
-FRAME THE QUESTION
-Restate the decision, the amount at stake (hours and dollars), and the date I must decide by. If any of those are missing, ask before researching.
-
-EVIDENCE (cite sources with dates for every load-bearing claim)
-- Market: who already sells this, prices, review counts, sales rank or volume signals where available.
-- Demand trend: growing, flat or fading — with the evidence, not a vibe.
-- Economics: realistic revenue per sale or per hour, platform fees, costs, tax set-aside. Median case, not best case.
-
-BOTH CASES
-Bull case: the strongest honest argument for, with numbers.
-Bear case: the strongest honest argument against, with numbers.
-Name the single assumption each case depends on.
-
-SENSITIVITY
-What has to be true for this to beat my current best option? What result at 2 weeks and at 30 days means KILL?
-
-VERDICT
-GO / TEST / NO-GO. If TEST: the test design (budget, duration, pass metric). If GO: my first 3 actions. Label every estimate as an estimate and every third-party sales figure as a model guess. List your sources in the order of the weight you gave them.</span><button class="copy-btn">Copy</button></div>
+<p>Frames the decision, gathers evidence with sources, argues both cases, and gives a GO / TEST / NO-GO verdict.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">SYSTEM</span><h3>Skill Builder — Turn a Workflow Into a Skill</h3><p>Converts a repeated job into saved instructions with triggers, approval gates, QC and failure modes — then test-runs it.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> a description of the job, or notes from the last 3 times you did it.</p>
-<div class="prompt-box adv"><span>Act as a systems designer. Turn my repeated workflow into a reusable skill Muse can run the same way every time.
-
-MY WORKFLOW: [describe the job, or paste notes from the last 3 times I did it]
-
-BUILD THE SKILL IN THIS ORDER
-1) Trigger — the exact requests that should invoke it, and the near-misses that should NOT.
-2) Inputs — everything the skill must collect before starting, and what to do when one is missing (ask once, grouped — never drip questions mid-run).
-3) Rules — my non-negotiables: floors, formats, forbidden moves, approval points. Write each as a testable rule, not advice ("drop roles under $X", not "consider pay").
-4) Steps — numbered, in execution order, each with its output.
-5) Output format — the exact shape of the deliverable, with a filled example from my real work.
-6) QC checklist — pass / fail lines the skill checks against its own output before showing me anything.
-7) Failure modes — the 3 ways this job goes wrong, and the skill's response to each (stop, flag, reroute — never silently guess).
-8) Approval gates — what the skill may do alone vs what waits for my explicit go (sends, submits and payments always wait).
-
-THEN: run the skill on one real example from my work, show the output, and list where the skill itself needs tightening.
-
-DELIVER: the complete skill text, ready to save, plus the test run and its QC result.</span><button class="copy-btn">Copy</button></div>
+<p>Turns a repeated workflow into a reusable skill, then tests it on a real example.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">QUALITY</span><h3>QC Audit — Adversarial Check</h3><p>An auditor prompt that hunts invented claims, mismatched numbers and silent truncation, and fails loudly.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the document, application, file or page to audit, and the source it was built from.</p>
-<div class="prompt-box adv"><span>Act as an adversarial QC auditor. Your job is to find what is wrong, not to be encouraging. Audit [the document / application / file / page] against [its source].
-
-CHECK IN THIS ORDER
-1) Numbers — every figure, date, price and count traced to the source. List each one: value, source location, match or MISMATCH.
-2) Names + claims — every name, title, credential and result claim. Anything not in the source is flagged as INVENTED, even if it sounds plausible.
-3) Completeness — content the source has that the output dropped, and output content with no source. Truncation hides in wrapped text, instruction pages and disclaimers — read those in full.
-4) Internal consistency — totals that do not add up, steps referenced but missing, promises made in one section and contradicted in another.
-5) Format — headings, tables, links and badges intact in the EXPORTED file, not the editor view.
-
-SCORING
-Give each section PASS or FAIL with the defect list by location (page / section / line). No global "looks good." A single invented claim or mismatched number = overall FAIL.
-
-OUTPUT: a defect table (location | defect | severity | fix), then the corrected version of only the failing sections. If you cannot verify something, say UNVERIFIED — do not fill the gap.</span><button class="copy-btn">Copy</button></div>
+<p>Audits a document against its source, scores each section, and lists every defect with a fix.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">MONEY</span><h3>Money Ops — Ledger Audit &amp; Monthly Close</h3><p>Reconciles the ledger against real deposits, recomputes the set-aside line by line, and closes the month with a defect table.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the month, your ledger, payout or deposit records, set-aside balance, and set-aside percentage.</p>
-<div class="prompt-box adv"><span>Act as a forensic bookkeeper auditing my side-income ledger for [month]. Accuracy over encouragement. Nothing is sent or paid; you audit and report.
-
-INPUTS
-- Ledger: [paste or attach the export]
-- Payout / deposit records for the month: [attach]
-- Set-aside account balance: [amount] — Set-aside rule: [30%] of profit
-- Categories: [your fixed list]
-
-STEP 1 — RECONCILE
-Match every income row to a deposit or payout record. List unmatched rows both ways: in the ledger with no deposit, and deposits with no ledger row.
-
-STEP 2 — SET-ASIDE MATH
-Recompute set-aside owed on the month's profit, line by line. Compare owed vs held and state the gap in dollars. Show the math; do not round it away.
-
-STEP 3 — EXPENSE PASS
-Every expense needs a category and a business purpose. Flag personal or mixed items, duplicates, and expenses with no receipt. Flag, do not silently recategorize.
-
-STEP 4 — DASHBOARD CHECK
-Compare every dashboard total against the ledger. Flag any panel whose reconciled date is stale, and any total that does not trace.
-
-STEP 5 — CLOSE REPORT
-Income, expenses, profit, set-aside status, next tax deadline, and a defect table (location | defect | fix) with corrected totals. Anything you cannot verify is marked UNVERIFIED, never estimated silently.
-
-DELIVER: reconciliation result, set-aside math, defect table, corrected monthly close.</span><button class="copy-btn">Copy</button></div>
+<p>Reconciles the ledger, recomputes the set-aside, checks expenses and the dashboard, and closes the month.</p><p>The full prompt is in the letter, one lane a week. <a class="back" href="#weekly-letter">Join the letter to get this week's prompt →</a></p>
 <p style="margin:14px 0 0"><a class="back" href="#/money-ops">Open Money Ops: tax &amp; expense tracking →</a></p>
 </div></details>
 
