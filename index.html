@@ -109,7 +109,7 @@ h3{font-size:21px;line-height:1.15}
 .lead{font-size:18px;color:var(--muted);max-width:680px}
 .hero{padding:36px 0 10px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
 .hero h1 span{color:var(--accent)}
-.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}@media(max-width:560px){.btns{flex-direction:column;align-items:stretch}.btns .btn{justify-content:center;text-align:center}}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;border:1px solid var(--line);background:var(--surface)}
 .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .terminal{background:#040912;color:#d6f4ff;border:1px solid #1e334d;border-radius:16px;padding:18px;font-family:var(--font-mono);font-size:13.5px;line-height:1.7;min-height:260px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
@@ -118,8 +118,8 @@ h3{font-size:21px;line-height:1.15}
 @keyframes blink{50%{opacity:0}} @media (prefers-reduced-motion: reduce){.cursor{animation:none}}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
 .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;display:block;transition:transform .18s ease,border-color .18s ease}
-a.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;display:block;transition:transform .18s ease,border-color .18s ease}.card h3 a,.card .arrow a{text-decoration:none}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
 .card p{color:var(--muted);font-size:15px;margin:8px 0 0}
 .card .meta{font-family:var(--font-mono);font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
 .card .arrow{margin-top:16px;font-weight:700;font-size:14px}
@@ -294,14 +294,14 @@ Menu
 <section class="hero"><div>
 <p class="kicker">Independent community · Not affiliated with Meta</p>
 <h1>Build. Test.<br><span>Ship what pays.</span></h1>
-<p class="lead">Muse Playbooks turns real experiments with Muse into reusable playbooks — for job hunting, freelance work, digital products and local services. No hype decks. Every method comes with steps, a quality check and a kill rule.</p>
+<p class="lead">Muse Playbooks points to one money lane a week, tested in the real world — for job hunting, freelance work, digital products and local services. No hype decks. The site shows you the lane. The letter shows you how it actually went.</p>
 <div class="btns"><a class="btn primary" href="#/new-to-muse">New to Muse? Start here →</a><a class="btn" href="#/playbooks">Browse playbooks</a><a class="btn" href="#/hustles">Compare hustles</a></div>
 <p class="note">Press <b>Ctrl / Cmd + K</b> anywhere to search every playbook, skill and article.</p>
 </div>
 <div class="terminal" aria-label="Playbook terminal demo"><div class="t-head"><span>muse playbooks — terminal</span><span>● live</span></div><div id="termBody"></div><span class="cursor"></span></div>
 </section>
 
-<section class="section" id="weekly-letter" style="background:#040912;border:1px solid #22d3ee;border-radius:16px;padding:26px;margin-top:28px"><h2>Get the prompt that works, every Monday</h2><p>One money lane a week, with the exact prompt, what worked, what did not, and the workaround. Two minutes, free.</p><form action="https://buttondown.com/api/emails/embed-subscribe/museplaybooks" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/museplaybooks', 'popupwindow')"><label for="bd-email" style="display:block;margin-bottom:8px">Email</label><input type="email" name="email" id="bd-email" placeholder="you@example.com" required style="width:100%;max-width:420px;padding:12px 13px;border-radius:10px;border:1px solid #22d3ee;background:#0a1526;color:#e6f4ff;margin-bottom:12px"><input type="submit" value="Join free" style="display:inline-block;padding:12px 22px;border-radius:999px;border:1px solid #22d3ee;background:#22d3ee;color:#06202a;font-weight:700;cursor:pointer"></form><p class="small" style="margin-top:14px">Free, 2 minutes a week, no spam, unsubscribe anytime.</p></section><section class="section" id="start-with-this-one" style="background:#0f1726;border:1px solid #22d3ee;border-radius:16px;padding:26px;margin-top:16px"><h2>Start with this one</h2><p>Job Hunt Auto Apply - Stop applying one job at a time. Give Muse the job hunt.</p><p><a class="btn primary" href="/playbooks/job-hunt/">Open the Job Hunt playbook</a></p></section><section class="section" id="starter-pdf"><a class="card" href="https://museplaybooks.com/muse-playbooks-starter.pdf" target="_blank" rel="noopener" style="display:block"><span class="meta">Free · No signup</span><h3>Free starter PDF</h3><p>10 jobs to try first, with prompts, steps, and a check at the end. Free, no signup to download, join the letter if you want the weekly deep dive.</p><span class="arrow">Download the starter PDF →</span></a></section><section class="section"><p class="kicker">Start here</p><h2>Start here in 3 steps</h2>
+<section class="section" id="weekly-letter" style="background:#040912;border:1px solid #22d3ee;border-radius:16px;padding:26px;margin-top:28px"><h2>One money lane a week, tested in the real world</h2><img src="subscribe-preview.webp" alt="Preview of the Muse Playbooks weekly letter" style="display:block;width:100%;height:auto;border-radius:12px;margin:0 0 18px"><form action="https://buttondown.com/api/emails/embed-subscribe/museplaybooks" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/museplaybooks', 'popupwindow')"><label for="bd-email" style="display:block;margin-bottom:8px">Email</label><input type="email" name="email" id="bd-email" placeholder="you@example.com" required style="width:100%;max-width:420px;padding:12px 13px;border-radius:10px;border:1px solid #22d3ee;background:#0a1526;color:#e6f4ff;margin-bottom:12px"><input type="submit" value="Join free" style="display:inline-block;padding:12px 22px;border-radius:999px;border:1px solid #22d3ee;background:#22d3ee;color:#06202a;font-weight:700;cursor:pointer"></form><p style="margin:10px 0 0"><a href="https://buttondown.com/museplaybooks/archive/get-upwork-proposals-out-when-the-browser-is-6363/">See a real issue</a></p><p class="small" style="margin-top:14px">Free, 2 minutes a week, no spam, unsubscribe anytime.</p></section><section class="section"><p class="kicker">Start here</p><h2>Start here in 3 steps</h2>
 <div class="start-path">
 <div class="start-step"><span class="num">1</span><h3>Understand Muse</h3><p>Muse is an agent that does multi-step work — research, drafting, building and checking — not just a chat box. Learn the five words that run everything here: task, playbook, skill, dashboard, cron.</p><p><a class="back" href="#/new-to-muse">New to Muse →</a></p></div>
 <div class="start-step"><span class="num">2</span><h3>Get access to Muse</h3><p>Muse is in early access, so there is no open signup for everyone yet. Check if your country is live, use the official signup or waitlist for your region with your real details, and if you get in, create your account first, then redeem an invite code in Settings within 48 hours. Full steps are on New to Muse.</p><p><a class="back" href="#/new-to-muse">How to access Muse, step by step →</a> · <a class="back" href="#/tools">Availability Checker →</a> · <a class="back" href="#/guides?filter=access">Access guides →</a></p></div>
@@ -310,16 +310,16 @@ Menu
 
 <section class="section"><p class="kicker">Fast start</p><h2>Start here in 10 minutes</h2>
 <details class="acc"><summary><div><h3>1 · Pick a lane (2 minutes)</h3><p>Use the Hustles table. Choose by time to first dollar, not by hype.</p></div><span class="chev">+</span></summary><div class="acc-body"><p>Write down three numbers: <b>expected dollars</b>, <b>time to first dollar</b>, and <b>hours per week</b> you can honestly give it. If you cannot put a real number on the first one, it is a hobby — treat it as one.</p><p><a class="back" href="#/hustles">Open the comparison table →</a></p></div></details>
-<details class="acc"><summary><div><h3>2 · Learn the two words that matter (3 minutes)</h3><p>Playbook = a method with steps, a QC check and a kill rule. Skill = that method saved so Muse reuses it.</p></div><span class="chev">+</span></summary><div class="acc-body"><p>A <b>playbook</b> is how a job gets done. A <b>skill</b> is the playbook written as saved instructions Muse follows on every run, so your floors, formats and checks survive between sessions.</p><p><a class="back" href="#/new-to-muse">New to Muse? Start here →</a></p></div></details>
-<details class="acc"><summary><div><h3>3 · Run one playbook, ship one thing (5 minutes)</h3><p>Pick the playbook for your lane and do step 1 today. Small and shipped beats planned and perfect.</p></div><span class="chev">+</span></summary><div class="acc-body"><p>Complete the first step of a playbook before you read anything else on this site. Then make a share card with the Share Card Generator in Tools and share it anywhere you already are.</p><p><a class="back" href="#/playbooks">Browse playbooks →</a></p></div></details>
+<details class="acc"><summary><div><h3>2 · Learn the two words that matter (3 minutes)</h3><p>Playbook = a tested method: the problem, the outcome, and one proof line. Skill = that method saved so Muse reuses it.</p></div><span class="chev">+</span></summary><div class="acc-body"><p>A <b>playbook</b> is how a job gets done. A <b>skill</b> is the playbook written as saved instructions Muse follows on every run, so your floors, formats and checks survive between sessions.</p><p><a class="back" href="#/new-to-muse">New to Muse? Start here →</a></p></div></details>
+<details class="acc"><summary><div><h3>3 · Run one playbook, ship one thing (5 minutes)</h3><p>Read the playbook for your lane. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. Small and shipped beats planned and perfect. <a class="back" href="#/tasks">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p></div><span class="chev">+</span></summary><div class="acc-body"><p>Read the playbook for your lane before you read anything else on this site. Then make a share card with the Share Card Generator in Tools and share it anywhere you already are.</p><p><a class="back" href="#/playbooks">Browse playbooks →</a></p></div></details>
 </section>
 
-<section class="section"><div class="callout"><strong>Advanced prompts</strong><p style="color:var(--muted);margin:0 0 14px">Full-length prompts for experienced users: phased instructions, scoring rubrics, exact output formats and QC gates for job hunt, KDP, stock batches, local services, freelance proposals, research, document production and audits. Plus step-by-step advanced guides, including setting up and applying on any freelance platform.</p><div class="btns" style="margin-top:0"><a class="btn primary" href="#/advanced-prompts">Open advanced prompts →</a></div></div></section>
+<section class="section"><div class="callout"><strong>Advanced prompts</strong><p style="color:var(--muted);margin:0 0 14px">The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. The site shows what each prompt does. <a class="back" href="#/tasks">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="btns" style="margin-top:0"><a class="btn primary" href="#/advanced-prompts">Open advanced prompts →</a></div></div></section>
 
-<section class="section" id="quick-wins"><p class="kicker">Quick wins</p><h2>Quick wins</h2><p class="lead">Small jobs that take 10 minutes and teach you how Muse works. Each one has a prompt to copy, steps, and a check at the end.</p><div class="grid"><div class="card"><span class="meta">Quick win · 10 minutes</span><h3>Match one receipt to one payment</h3><p><b>What it does:</b> take one receipt photo or PDF, find the matching payment, and confirm the amount, date, and merchant before you file it.</p><div class="prompt-box"><span>Match this receipt to one payment. Tell me the merchant, date, amount, and payment method. Show me the exact line that proves the match. Do not guess. If nothing matches exactly, say so.</span><button class="copy-btn">Copy</button></div><p><b>Steps:</b></p><ol><li>Upload one receipt only.</li><li>Ask Muse to list the match candidates.</li><li>Open your bank or card app and check the amount and date yourself.</li><li>File the receipt only after the numbers match.</li></ol><p><b>QC check:</b> amount, date, and merchant all match in the original payment record, not just in Muse reply.</p><p><b>Funnel:</b> if this worked, try the <a class="back" href="#/playbooks/job-hunt">Job Hunt playbook</a> next for a bigger job with the same check habit. <a class="back" href="#/playbooks">Browse all playbooks →</a></p></div><div class="card"><span class="meta">Quick win · 10 minutes</span><h3>Check a parking session before you pay</h3><p><b>What it does:</b> photograph a parking sign, get the operator, zone, plate, space, duration, restrictions, and total in one clear list, then check it against the live checkout before you pay.</p><div class="prompt-box"><span>Read this parking sign photo. List operator, zone, plate, space, duration, restrictions, and total. Show me what is unclear. Do not pay anything. I will check the live checkout myself.</span><button class="copy-btn">Copy</button></div><p><b>Steps:</b></p><ol><li>Photograph the full sign, not a crop.</li><li>Ask Muse to list each field separately.</li><li>Open the operator checkout and compare every field.</li><li>Pay only if the live total matches.</li></ol><p><b>QC check:</b> live checkout total, zone, and plate match. If any field is unclear, stop and read the sign again.</p><p><b>Funnel:</b> if this worked, try the <a class="back" href="#/playbooks/job-hunt">Job Hunt playbook</a> next for a bigger job with the same check habit. <a class="back" href="#/playbooks">Browse all playbooks →</a></p></div><div class="card"><span class="meta">Quick win · 10 minutes</span><h3>Track one library hold until pickup</h3><p><b>What it does:</b> build a small checkable list for one library hold, with title, branch, status, and due date, so you do not miss pickup.</p><div class="prompt-box"><span>Track this library hold for me. List title, author, branch, hold status, and pickup deadline. Tell me what to check next, and when. Do not change the hold. I will confirm in my library account.</span><button class="copy-btn">Copy</button></div><p><b>Steps:</b></p><ol><li>Give Muse the title and branch only.</li><li>Ask for a short list with status and deadline.</li><li>Check the deadline in your library account.</li><li>Set one reminder for the day before pickup.</li></ol><p><b>QC check:</b> title, branch, and deadline match your library account. No hold changed without your approval.</p><p><b>Funnel:</b> if this worked, try the <a class="back" href="#/playbooks/job-hunt">Job Hunt playbook</a> next for a bigger job with the same check habit. <a class="back" href="#/playbooks">Browse all playbooks →</a></p></div></div></section><section class="section"><p class="kicker">Directory</p><h2>Where to go first</h2><p class="lead">Pick by where you are, not by what's trending.</p>
+<section class="section" id="quick-wins"><p class="kicker">Quick wins</p><h2>Quick wins</h2><p class="lead">Small jobs that take 10 minutes and teach you how Muse works. Each one shows what it does. The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first.</p><div class="grid"><div class="card"><span class="meta">Quick win · 10 minutes</span><h3>Match one receipt to one payment</h3><p><b>What it does:</b> take one receipt photo or PDF, find the matching payment, and confirm the amount, date, and merchant before you file it.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p><p><b>Funnel:</b> if this worked, try the <a class="back" href="#/playbooks/job-hunt">Job Hunt playbook</a> next for a bigger job with the same check habit. <a class="back" href="#/playbooks">Browse all playbooks →</a></p></div><div class="card"><span class="meta">Quick win · 10 minutes</span><h3>Check a parking session before you pay</h3><p><b>What it does:</b> photograph a parking sign, get the operator, zone, plate, space, duration, restrictions, and total in one clear list, then check it against the live checkout before you pay.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p><p><b>Funnel:</b> if this worked, try the <a class="back" href="#/playbooks/job-hunt">Job Hunt playbook</a> next for a bigger job with the same check habit. <a class="back" href="#/playbooks">Browse all playbooks →</a></p></div><div class="card"><span class="meta">Quick win · 10 minutes</span><h3>Track one library hold until pickup</h3><p><b>What it does:</b> build a small checkable list for one library hold, with title, branch, status, and due date, so you do not miss pickup.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p><p><b>Funnel:</b> if this worked, try the <a class="back" href="#/playbooks/job-hunt">Job Hunt playbook</a> next for a bigger job with the same check habit. <a class="back" href="#/playbooks">Browse all playbooks →</a></p></div></div></section><section class="section"><p class="kicker">Directory</p><h2>Where to go first</h2><p class="lead">Pick by where you are, not by what's trending.</p>
 <div class="grid">
 <a class="card" href="#/new-to-muse"><span class="meta">01 · Start</span><h3>New to Muse</h3><p>How to access Muse if you do not have it yet, what Muse is, what a playbook and a skill actually are, and 4 steps to your first useful result.</p><div class="arrow">Start learning →</div></a>
-<a class="card" href="#/playbooks"><span class="meta">02 · Do</span><h3>Playbooks</h3><p>Step-by-step methods for Job Hunt, KDP Puzzle Books, Adobe Stock, Local Services and Upwork MCP.</p><div class="arrow">Open playbooks →</div></a>
+<div class="card"><span class="meta">02 · Do</span><h3><a href="#/playbooks">Playbooks</a></h3><p>Five tested methods. The site shows you the lane — the problem, the outcome, and one proof line. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="arrow"><a href="#/playbooks">Open playbooks →</a></div></div>
 <a class="card" href="#/tasks"><span class="meta">03 · Copy</span><h3>Tasks</h3><p>Everything Muse can do, in one filterable grid: Photo Generation, Puzzle Books, Documents, Job Hunt, Stock Media, Local Services, Research, Decide, Plan, Money Ops, Automation, Daily Life &amp; Home, Travel &amp; Places, Shopping &amp; Food, Learn &amp; Translate, Media &amp; Audio, Build &amp; Data. One copy button per prompt.</p><div class="arrow">Browse tasks →</div></a>
 <a class="card" href="#/tools"><span class="meta">04 · Tools</span><h3>Tools</h3><p>What Muse uses to do the work: image generation, documents, dashboards, research, crons, memory and connectors, in one filterable grid.</p><div class="arrow">Browse tools →</div></a>
 <a class="card" href="#/guides"><span class="meta">05 · Guides</span><h3>Guides</h3><p>Guides by category: Basics, Tutorial, Workflow, Comparison, Safety, Cost, Access, Settings and News. Each one opens with a direct answer, then steps.</p><div class="arrow">Browse guides →</div></a>
@@ -357,8 +357,8 @@ Menu
 
 <section class="section"><p class="kicker">Featured</p><h2>Start with one lane</h2>
 <div class="grid2">
-<a class="card" href="#/playbooks/job-hunt"><h3>Job Hunt — Any Work Type</h3><p>Remote, hybrid or onsite. Set a pay floor, verify on the employer's own page, QC before you submit. Never guess a screening answer.</p><div class="arrow">Run this playbook →</div></a>
-<a class="card" href="/playbooks/upwork-mcp/"><span class="meta">Freelance · Week 1</span><h3>Upwork MCP Playbook</h3><p>Connect Muse to Upwork with the official Upwork MCP and upwork-mcp-cli — and what to do when the browser is blocked by Cloudflare. One proposal sent at $55/hr.</p><div class="arrow">Open →</div></a><a class="card" href="#/playbooks/kdp"><h3>KDP Puzzle Books</h3><p>Test demand before you build. Solver-checked puzzles, thumbnail-first covers, and a strict niche test.</p><div class="arrow">Run this playbook →</div></a>
+<div class="card"><h3><a href="#/playbooks/job-hunt">Job Hunt — Any Work Type</a></h3><p>Applying one job at a time is slow, and guessing on applications is how good roles get lost. One week we tested a system that sets your floor first, then checks every application before it goes out. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=career">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="arrow"><a href="#/playbooks/job-hunt">Run this playbook →</a></div></div>
+<div class="card"><span class="meta">Freelance</span><h3><a href="/playbooks/upwork-mcp/">Upwork Playbook</a></h3><p>Upwork kept blocking the browser, so one proposal had to go out another way. It went out. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=documents">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="arrow"><a href="/playbooks/upwork-mcp/">Open →</a></div></div><div class="card"><h3><a href="#/playbooks/kdp">KDP Puzzle Books</a></h3><p>Most puzzle books fail before they are built, on the theme, not the puzzles. We tested one theme first, then built. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=puzzle">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="arrow"><a href="#/playbooks/kdp">Run this playbook →</a></div></div>
 </div></section>
 
 <section class="section"><div class="callout"><strong>The Muse Playbooks rule</strong>Expected dollars first. Time to first dollar second. Effort cost third. If a lane misses its kill rule, you stop — you don't “post more and hope.”</div></section>
@@ -409,7 +409,7 @@ Menu
 </div></section>
 <div class="grid">
 <div class="card"><span class="meta">What is Muse?</span><h3>An AI agent that does work, not just chat</h3><p>Muse is Meta's personal AI agent. Beyond answering questions, it can research, draft, build pages and documents, work through multi-step tasks, and use skills — reusable instructions for jobs you repeat. You stay in charge: you approve sends, payments and submissions.</p></div>
-<div class="card"><span class="meta">What is a playbook?</span><h3>A method with steps, a check, and a stop rule</h3><p>A playbook on Muse Playbooks is not a vague guide. It has: the goal, the setup numbers, numbered steps, a QC check before you ship, and a kill rule that tells you when to quit a lane that isn't paying.</p></div>
+<div class="card"><span class="meta">What is a playbook?</span><h3>A tested method: the problem, the outcome, and one proof line</h3><p>A playbook shows you the lane — the problem, the outcome, and one proof line. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first.</p></div>
 <div class="card"><span class="meta">What is a skill?</span><h3>Saved instructions Muse reuses</h3><p>A skill is a playbook Muse itself follows. Instead of re-explaining your rules every time — your price floor, your QC list, your format — you save them once as a skill and Muse applies them on every run.</p></div>
 <div class="card"><span class="meta">What is a dashboard?</span><h3>One pinned page that shows where you stand</h3><p>A dashboard is built from a tracker or ledger — applications, income, books, batches, jobs — and pinned so it is the first thing you open. It keeps no numbers of its own: every total traces to the source underneath it, and it shows when it was last updated.</p></div>
 <div class="card"><span class="meta">What is a cron?</span><h3>A job Muse runs on a schedule</h3><p>A cron runs whether or not you open a chat: a weekly sweep, a deadline watch, a payment alert. It updates your tracker or dashboard and reports only what needs a decision. Crons draft, log and alert — they never send, pay or submit without your go.</p></div>
@@ -448,413 +448,103 @@ Menu
 <div class="card"><span class="meta">Example · Side income</span><h3>Skill → ledger → dashboard → cron → monthly close</h3><p><b>Skill:</b> your lane's rules saved once. <b>Ledger:</b> every payment and expense logged the day it lands, set-aside moved. <b>Dashboard:</b> pinned Money Ops view — income by lane, set-aside owed vs held, deadlines. <b>Cron:</b> weekly expense sweep reconciles it and flags only gaps. <b>Close:</b> monthly numbers you can trust, because they were kept current all month.</p><div class="arrow"><a class="back" href="#/money-ops">Money Ops →</a></div></div>
 </div></section>
 
-<section class="section"><h2>Starter prompts</h2><details class="acc"><summary><div><h3>Six starter prompts</h3><p>Copy one, replace the brackets with your situation, and run it.</p></div><span class="chev">+</span></summary><div class="acc-body">
-<div class="prompt-box"><span>Act as my job hunt assistant. Ask me for my pay floor, work type, location, schedule and must-haves before searching for anything.</span><button class="copy-btn">Copy</button></div>
-<div class="prompt-box"><span>Turn this messy process into a playbook: goal, setup numbers, numbered steps, a QC checklist, and a kill rule.</span><button class="copy-btn">Copy</button></div>
-<div class="prompt-box"><span>Before I build this product, test the demand: who is already selling it, at what price, and how well does it rank?</span><button class="copy-btn">Copy</button></div>
-<div class="prompt-box"><span>QC this before I submit: check every name, date, number and claim against the source. Flag anything you had to guess.</span><button class="copy-btn">Copy</button></div>
-<div class="prompt-box"><span>Build a tracker for [my lane]: one row per item with status and next-step date, then build a pinned dashboard from it that shows totals, open items and deadlines, with its last-updated date at the top.</span><button class="copy-btn">Copy</button></div>
-<div class="prompt-box"><span>Create a weekly cron for [my lane]: [day and time], reconcile my tracker, update my pinned dashboard, and report only exceptions — overdue next steps, missing items and upcoming deadlines. Flag anything ambiguous for my call, never guess.</span><button class="copy-btn">Copy</button></div>
-<p style="margin:14px 0 0">Experienced user? The starter prompts above are the short versions. <a class="back" href="#/advanced-prompts">Open the advanced prompts library →</a></p>
+<section class="section"><h2>Starter prompts</h2><details class="acc"><summary><div><h3>Six starter prompts</h3><p>Each one shows what it does. The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first.</p></div><span class="chev">+</span></summary><div class="acc-body">
+<div class="prompt-box"><span>Sets your pay floor, work type, location, schedule and must-haves before it searches for anything.</span></div>
+<div class="prompt-box"><span>Turns a messy process into a reusable playbook.</span></div>
+<div class="prompt-box"><span>Tests demand before you build: who is already selling it, at what price, and how well it ranks.</span></div>
+<div class="prompt-box"><span>Checks every name, date, number and claim against the source before you submit.</span></div>
+<div class="prompt-box"><span>Builds a tracker for your lane and a pinned dashboard from it.</span></div>
+<div class="prompt-box"><span>Sets a weekly cron that reconciles your tracker and reports only exceptions.</span></div>
+<p style="margin:14px 0 0">Experienced user? The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a> · <a class="back" href="#/advanced-prompts">Open the advanced prompts library →</a></p>
 </div></details></section></main>
 
 <!-- PLAYBOOKS DIRECTORY -->
 <main class="view" id="view-playbooks">
-<a class="back" href="#/">← Home</a><p class="kicker" style="margin-top:16px">Directory</p><h2>Playbooks</h2><p class="lead">Five tested methods. Each one is its own page with full steps, a QC check, a kill rule, a deep dive with templates and numbers, and a Verified in the wild section covering what other Muse users have done — labeled tested, reported, or announced.</p>
+<a class="back" href="#/">← Home</a><p class="kicker" style="margin-top:16px">Directory</p><h2>Playbooks</h2><p class="lead">Five tested methods. The site shows you the lane — the problem, the outcome, and one proof line. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p>
 <div class="grid2">
-<a class="card" href="#/playbooks/job-hunt"><span class="meta">Career</span><h3>Job Hunt — Any Work Type</h3><p>Remote, hybrid or onsite. Pay floor first, total-pay comparison, QC before every submit.</p><div class="arrow">Open →</div></a>
-<a class="card" href="/playbooks/upwork-mcp/"><span class="meta">Freelance · Week 1</span><h3>Upwork MCP Playbook</h3><p>Connect Muse to Upwork with the official Upwork MCP and upwork-mcp-cli — and what to do when the browser is blocked by Cloudflare. One proposal sent at $55/hr.</p><div class="arrow">Open →</div></a><a class="card" href="#/playbooks/kdp"><span class="meta">Publishing</span><h3>KDP Puzzle Books</h3><p>Validate the niche with sales-rank tests, build solver-checked books, design for the thumbnail.</p><div class="arrow">Open →</div></a>
-<a class="card" href="#/playbooks/adobe-stock"><span class="meta">Creative</span><h3>Adobe Stock Batches</h3><p>Small weekly batches, 100% zoom QC, and a clean CSV pipeline for titles and keywords.</p><div class="arrow">Open →</div></a>
-<a class="card" href="#/playbooks/local-services"><span class="meta">Local</span><h3>Local Services</h3><p>Proof first, quote before work, deposit up front, and one review ask after a finished job.</p><div class="arrow">Open →</div></a>
+<div class="card"><span class="meta">Career</span><h3><a href="#/playbooks/job-hunt">Job Hunt — Any Work Type</a></h3><p>Applying one job at a time is slow, and guessing on applications is how good roles get lost. One week we tested a system that sets your floor first, then checks every application before it goes out. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=career">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="arrow"><a href="#/playbooks/job-hunt">Open →</a></div></div>
+<div class="card"><span class="meta">Freelance</span><h3><a href="/playbooks/upwork-mcp/">Upwork Playbook</a></h3><p>Upwork kept blocking the browser, so one proposal had to go out another way. It went out. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=documents">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="arrow"><a href="/playbooks/upwork-mcp/">Open →</a></div></div><div class="card"><span class="meta">Publishing</span><h3><a href="#/playbooks/kdp">KDP Puzzle Books</a></h3><p>Most puzzle books fail before they are built, on the theme, not the puzzles. We tested one theme first, then built. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=puzzle">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="arrow"><a href="#/playbooks/kdp">Open →</a></div></div>
+<div class="card"><span class="meta">Creative</span><h3><a href="#/playbooks/adobe-stock">Adobe Stock Batches</a></h3><p>Stock is a background compounder, not a lottery ticket. One week we ran a small batch, checked every image at full size, and tracked what got accepted. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=stock">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="arrow"><a href="#/playbooks/adobe-stock">Open →</a></div></div>
+<div class="card"><span class="meta">Local</span><h3><a href="#/playbooks/local-services">Local Services</a></h3><p>Local work pays fastest when you quote in writing, take a deposit, and ask for one review after a happy job. We tested that exact system on real jobs. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=local">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="arrow"><a href="#/playbooks/local-services">Open →</a></div></div>
 </div></main>
 
 <!-- JOB HUNT -->
-<main class="view" id="view-pb-job">
-<a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Career</p><h2>Job Hunt — Any Work Type</h2><p class="lead">Works for remote, hybrid and onsite roles. The method is the same: define the job you can accept before you look, then protect yourself with QC.</p>
-<ol class="steps">
-<li><b>Set your floor first</b>Minimum pay, work type, location or time zone, schedule, and benefits you need. Write it down before searching.</li>
-<li><b>Search to your floor, not to a vibe</b>Rank roles against your actual experience and proof — a portfolio and measurable results beat claims, degree or not.</li>
-<li><b>Verify on the employer's own page</b>Listings get copied and go stale. Confirm title, pay range, work type and requirements at the source.</li>
-<li><b>Tailor honestly</b>Match your real work to the posting's language. Reframe, never invent.</li>
-<li><b>Compare total pay</b>Base + employer retirement match + health costs + PTO + schedule. A higher headline salary can pay less overall.</li>
-<li><b>QC before submit — every time</b>Name, contact, work history, education, salary, and the exact job title and company. Never guess a screening answer; if you don't know, check or leave it for review.</li>
-<li><b>Track everything</b>Company, role, date, status, next step. Check for a prior application before applying again.</li>
-</ol>
-<div class="callout"><strong>QC check</strong>Would every line on this application survive the employer reading it back to you in an interview? If not, fix it before submit.</div>
-<div class="callout danger"><strong>Kill rule</strong>If a portal forces an account with no guest, Google or LinkedIn sign-in option and the role isn't a strong match at strong pay, skip it. Your hours are worth more than a broken funnel.</div>
-<div class="callout"><strong>Track this playbook</strong><p style="color:var(--muted);margin:0">Log every application in the tracker above, pin a dashboard of live applications, interviews and deadlines, and set a weekly cron to flag follow-ups due and closing dates. Drafts still wait for your approval. <a class="back" href="#/track">Crons &amp; Dashboards →</a></p></div>
-<details class="acc" style="margin-top:20px"><summary><div><h3>Deep dive: templates &amp; the meat</h3><p>Application tracker fields, total-pay worksheet, and the screening-answer rule.</p></div><span class="chev">+</span></summary><div class="acc-body"><b>Tracker fields (one row per application)</b><p>Company · role · source · date applied · pay range · work type · status · next step · date of next step. Before applying anywhere, search this tracker <i>and</i> your email for the company — double applications look careless.</p><b>Total-pay worksheet</b><p>Base pay + employer retirement match (check vesting and plan-year rules) − health premium difference − surcharges + PTO value + schedule value. Compare a full year on both sides, not the offer letter&rsquo;s first line.</p><b>Screening answers</b><p>Write your standing answers down once (authorization, sponsorship, location, clearance, relationships) and reuse them verbatim. If a question is not covered, stop and find out — a guessed answer can end a candidacy or worse. Also agree your <b>reason for leaving</b> and <b>earliest start date</b> with yourself in advance, so every application tells the same true story.</p><div class="prompt-box"><span>Build my application tracker and total-pay comparison for these two roles. Flag any screening question my standing answers do not cover — do not guess it.</span><button class="copy-btn">Copy</button></div></div></details>
-<details class="acc" style="margin-top:20px"><summary><div><h3>Verified in the wild</h3><p>What other Muse users — not Muse Playbooks — have actually done, labeled by how solid the evidence is.</p></div><span class="chev">+</span></summary><div class="acc-body">
-<p><b>How to read the labels:</b> <b>Tested</b> — an independent user ran it and published what happened. <b>Reported</b> — the user says they use Muse this way; nobody independent has checked the results. <b>Announced</b> — from Meta's own announcement, not a user test.</p>
-<p><span class="status live">Tested</span> <b>Meeting preparation, done before you walk in.</b> An independent tester who ran 10 real business tasks through Muse used it to prepare for meetings — pulling the relevant context together ahead of time instead of digging through threads in the room. The same move works for interviews: brief yourself on the company, the role and your own talking points before you sit down. <i>Source: <a href="https://www.aiagentslibrary.com/blog/meta-muse-review/" target="_blank" rel="noopener">Independent tester — 10 business tasks</a>.</i></p>
-<p><span class="status live">Tested</span> <b>A competitor brief that finished after the app was closed.</b> In the same test, a competitor brief was still completed after the tester closed the app — the job ran to the end on its own and the finished brief was waiting. For a job hunt, that is employer research you can queue and collect later: set it running, go apply, come back to a finished brief. <i>Source: <a href="https://www.aiagentslibrary.com/blog/meta-muse-review/" target="_blank" rel="noopener">Independent tester — 10 business tasks</a>.</i></p>
-<p><span class="status">Reported</span> <b>Weekly performance briefings instead of daily checking.</b> Creators report having Muse pull their numbers together into one weekly briefing rather than opening dashboards every day. A job hunt runs the same way: one weekly rollup of applications sent, replies in and follow-ups due beats re-reading the tracker daily. <i>Source: <a href="https://scoop.app/blog/influencer/marketing/meta-muse-instagram-influencer-marketing.html" target="_blank" rel="noopener">Creator social media and brand deal tracking</a>.</i></p>
-</div></details>
-</main>
+<main class="view" id="view-pb-job"><a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Career · November 10, 2026</p><h2>Job Hunt — Any Work Type</h2><p class="lead">Applying one job at a time is slow, and guessing on applications is how good roles get lost. One week we tested a system that sets your floor first, then checks every application before it goes out. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=career">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="callout"><strong>No money promise</strong><p style="color:var(--muted);margin:0">Income figures on this site are typical ranges for general information, not a promise of earnings.</p></div><div class="btns"><a class="btn primary" href="#weekly-letter">Join the letter — free</a><a class="btn" href="#/playbooks">Back to all playbooks</a></div></main>
 
 <!-- KDP -->
-<main class="view" id="view-pb-kdp">
-<a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Publishing</p><h2>KDP Puzzle Books</h2><p class="lead">Puzzle books look passive. The winners are the ones who validated demand and checked every page.</p>
-<ol class="steps">
-<li><b>Test the niche first</b>Check best-seller rank on competing titles. If most of the top titles rank poorly (high numbers = low sales), the niche is a pass, however much you like the theme.</li>
-<li><b>Validate in 10 minutes before building</b>Price, review counts, and publication dates tell you if buyers are active right now.</li>
-<li><b>Build with a solver</b>Generate puzzles programmatically and verify every solution. A book with unsolvable puzzles earns returns and 1-star reviews.</li>
-<li><b>Design the cover for the thumbnail</b>Big bold title readable at ~200px wide, one clear theme image, puzzle count and “Large Print” badge where relevant. Test it small before you upload.</li>
-<li><b>Render and read every page type</b>Export, open the actual file, and read the instructions page fully — truncated text is the most common silent bug.</li>
-<li><b>Disclose AI content accurately</b>If the cover art is AI-generated, answer Yes for that element in KDP. Code-generated interiors are a different answer.</li>
-</ol>
-<div class="callout"><strong>QC check</strong>Thumbnail test at 200px, solver pass on 100% of puzzles, and a full read of page 2. All three, every book.</div>
-<div class="callout danger"><strong>Kill rule</strong>No theme ships until it passes your rank test. “I like this topic” is not a test.</div>
-<h3>When the upload flags errors</h3>
-<p>Expect the first upload to fail. Read the exact error, not the headline.</p>
-<p>Trim size, margins, and fonts are the usual three. Fix one at a time and re-upload.</p>
-<p>A title too close to the top edge is a margin error, even if it looks fine on screen. A standard font that is not embedded is a font error, even if the PDF opens fine.</p>
-<p>Keep checking until the previewer shows zero errors, then approve. That loop is the work, not a sign the book is broken.</p>
-<div class="callout"><strong>Track this playbook</strong><p style="color:var(--muted);margin:0">Keep a pipeline tracker — themes tested, verdicts, books in production, QC results — pin a dashboard of what is live and selling, and let a weekly cron surface stalled books and untested themes. <a class="back" href="#/track">Crons &amp; Dashboards →</a></p></div>
-<details class="acc" style="margin-top:20px"><summary><div><h3>Deep dive: the numbers behind the niche test</h3><p>How to read a sales rank, and the cover spec that survives the thumbnail.</p></div><span class="chev">+</span></summary><div class="acc-body"><b>Reading Best Sellers Rank</b><p>Lower is better: a rank in the low tens of thousands means steady daily sales; hundreds of thousands means occasional sales; over a million usually means effectively none. A strict pass wants <b>most of the top 5 competing titles under ~100,000</b>, with recent publication dates and real review counts. One outlier hit among dead titles is luck, not a niche. Third-party &ldquo;sales estimate&rdquo; tools are model guesses — label them that way.</p><b>Cover spec</b><p>Title set in a bold sans-serif, readable at <b>200px wide</b>; one clear theme image (no clip-art clutter); high contrast; puzzle count and &ldquo;Large Print&rdquo; badges in corners a thumbnail keeps. Test at thumbnail size before upload — that is the size buyers actually judge.</p><b>Interior spec</b><p>Puzzles generated and <b>solver-verified 100%</b>; solutions included; instruction page read in full in the exported file. If cover art is AI-generated, disclose exactly that element in KDP.</p></div></details>
-<details class="acc" style="margin-top:20px"><summary><div><h3>Verified in the wild</h3><p>What other Muse users — not Muse Playbooks — have actually done, labeled by how solid the evidence is.</p></div><span class="chev">+</span></summary><div class="acc-body">
-<p><b>How to read the labels:</b> <b>Tested</b> — an independent user ran it and published what happened. <b>Reported</b> — the user says they use Muse this way; nobody independent has checked the results. <b>Announced</b> — from Meta's own announcement, not a user test.</p>
-<p><span class="status live">Tested</span> <b>A Facebook caption written from the page's own track record.</b> An independent tester running 10 real business tasks through Muse had it write a Facebook caption based on how the page's earlier posts had actually performed — not a generic caption written blind. For a puzzle book launch, that means promo posts built on what your own audience already responded to. <i>Source: <a href="https://www.aiagentslibrary.com/blog/meta-muse-review/" target="_blank" rel="noopener">Independent tester — 10 business tasks</a>.</i></p>
-<p><span class="status">Reported</span> <b>Caption and Reel ideas mined from Instagram and Threads.</b> Creators report having Muse analyze their Instagram and Threads activity and turn it into caption and short-video ideas. For KDP, that is a repeatable way to get book promo angles out of your own accounts instead of inventing posts from nothing. <i>Source: <a href="https://lumienai.com/news/meta-muse-ai-agent-review-vs-grok-2026" target="_blank" rel="noopener">Creator Instagram and Threads analysis test</a>.</i></p>
-<p><span class="status">Reported</span> <b>A weekly briefing on what performed.</b> Creators also report getting one weekly performance briefing from Muse — what landed, what did not — instead of checking stats daily. Applied to publishing: one weekly look at which books and posts moved, then decide the next book or post from that. <i>Source: <a href="https://scoop.app/blog/influencer/marketing/meta-muse-instagram-influencer-marketing.html" target="_blank" rel="noopener">Creator social media and brand deal tracking</a>.</i></p>
-</div></details>
-</main>
+<main class="view" id="view-pb-kdp"><a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Publishing · November 10, 2026</p><h2>KDP Puzzle Books</h2><p class="lead">Most puzzle books fail before they are built, on the theme, not the puzzles. We tested one theme first, then built. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=puzzle">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="callout"><strong>No money promise</strong><p style="color:var(--muted);margin:0">Income figures on this site are typical ranges for general information, not a promise of earnings.</p></div><div class="btns"><a class="btn primary" href="#weekly-letter">Join the letter — free</a><a class="btn" href="#/playbooks">Back to all playbooks</a></div></main>
 
 <!-- ADOBE -->
-<main class="view" id="view-pb-stock">
-<a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Creative</p><h2>Adobe Stock Batches</h2><p class="lead">A background compounder, not a lottery ticket. Small, consistent, quality-checked batches beat one giant dump.</p>
-<ol class="steps">
-<li><b>Work from a prompt matrix</b>Plan subjects × settings × styles in a grid so a batch covers demand without duplicates.</li>
-<li><b>Cap the batch</b>Keep batches small enough to QC properly — around 20 assets is a sane ceiling per session.</li>
-<li><b>QC at 100% zoom</b>Hands, text, edges, artifacts. Reject anything you'd be embarrassed to license. Buyers can tell.</li>
-<li><b>Title and keyword via CSV</b>Build the upload CSV as you go: filename, descriptive title, relevant keywords, correct category. No keyword stuffing.</li>
-<li><b>Ship weekly, same day</b>Consistency compounds discoverability more than volume spikes.</li>
-</ol>
-<div class="callout"><strong>QC check</strong>Every asset viewed at 100%, every CSV row matched to its file, zero guessed keywords.</div>
-<div class="callout danger"><strong>Kill rule</strong>If a subject category gets repeated rejections or zero traction after several batches, rotate it out. Don't feed a dead category.</div>
-<div class="callout"><strong>Track this playbook</strong><p style="color:var(--muted);margin:0">Log every batch in a tracker — assets, QC scores, approvals, downloads by category — pin the results on a dashboard, and run the weekly batch on a cron reminder so the rhythm survives busy weeks. <a class="back" href="#/track">Crons &amp; Dashboards →</a></p></div>
-<details class="acc" style="margin-top:20px"><summary><div><h3>Deep dive: batch manifest &amp; CSV format</h3><p>The exact shape of a batch that uploads cleanly the first time.</p></div><span class="chev">+</span></summary><div class="acc-body"><b>Prompt matrix</b><p>Rows are subjects, columns are settings, layers are styles. Fill cells deliberately so the batch covers demand without near-duplicates competing with each other in search.</p><b>CSV columns</b><p><b>filename · title · keywords · category</b> — one row per asset, built during QC, not reconstructed afterwards. Titles describe what a buyer would search for; keywords stay relevant and honest.</p><b>Rhythm</b><p>Same day weekly, batch capped around 20. Track approvals, rejections and first downloads per category; two flat batches in a category is data — rotate.</p></div></details>
-<details class="acc" style="margin-top:20px"><summary><div><h3>Verified in the wild</h3><p>What other Muse users — not Muse Playbooks — have actually done, labeled by how solid the evidence is.</p></div><span class="chev">+</span></summary><div class="acc-body">
-<p><b>How to read the labels:</b> <b>Tested</b> — an independent user ran it and published what happened. <b>Reported</b> — the user says they use Muse this way; nobody independent has checked the results. <b>Announced</b> — from Meta's own announcement, not a user test.</p>
-<p><span class="status">Reported</span> <b>Caption and Reel ideas from Instagram and Threads analysis.</b> Creators report having Muse work through their Instagram and Threads activity and come back with caption and short-video ideas based on it. For a stock contributor, that is the marketing side of the lane: regular posts about new batches, generated from what your own accounts show is working. <i>Source: <a href="https://lumienai.com/news/meta-muse-ai-agent-review-vs-grok-2026" target="_blank" rel="noopener">Creator Instagram and Threads analysis test</a>.</i></p>
-<p><span class="status live">Tested</span> <b>A Facebook caption built on actual page performance.</b> An independent tester who ran 10 real business tasks through Muse had it draft a Facebook caption using the page's real past performance as the input. Promoting a new batch the same way — from your own numbers, not from a template — is the version worth copying. <i>Source: <a href="https://www.aiagentslibrary.com/blog/meta-muse-review/" target="_blank" rel="noopener">Independent tester — 10 business tasks</a>.</i></p>
-<p><span class="status">Reported</span> <b>One weekly performance briefing.</b> Creators report letting Muse assemble a weekly briefing on how their content performed, instead of checking dashboards daily. The stock parallel is direct: one weekly rollup of approvals, rejections and downloads by category is exactly what the batch tracker in this playbook is for. <i>Source: <a href="https://scoop.app/blog/influencer/marketing/meta-muse-instagram-influencer-marketing.html" target="_blank" rel="noopener">Creator social media and brand deal tracking</a>.</i></p>
-</div></details>
-</main>
+<main class="view" id="view-pb-stock"><a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Creative · November 10, 2026</p><h2>Adobe Stock Batches</h2><p class="lead">Stock is a background compounder, not a lottery ticket. One week we ran a small batch, checked every image at full size, and tracked what got accepted. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=stock">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="callout"><strong>No money promise</strong><p style="color:var(--muted);margin:0">Income figures on this site are typical ranges for general information, not a promise of earnings.</p></div><div class="btns"><a class="btn primary" href="#weekly-letter">Join the letter — free</a><a class="btn" href="#/playbooks">Back to all playbooks</a></div></main>
 
 <!-- LOCAL -->
-<main class="view" id="view-pb-local">
-<a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Local</p><h2>Local Services</h2><p class="lead">The fastest lane to first dollars for most people: a useful skill, sold to neighbors and local businesses, with proof doing the marketing.</p>
-<ol class="steps">
-<li><b>Define your scope honestly</b>List what you do well and what you don't do. Saying no to out-of-scope work protects your reviews.</li>
-<li><b>Proof first</b>Photos of finished work (with permission, no client personal details), before/after where it fits, and a simple services page.</li>
-<li><b>Quote before work, deposit up front</b>Flat quote in writing, a modest deposit, and parts or extras agreed before you buy anything. Any sourcing fee is agreed in advance, never a surprise.</li>
-<li><b>Show up like a system</b>Confirm the appointment, arrive with the kit, leave a short written summary of what was done.</li>
-<li><b>One review ask</b>After a happy job, ask once — send both your Google review link and your community recommendation link in the same message. Never ask twice, never ask someone who already reviewed you.</li>
-<li><b>Pitch partners who need it</b>Only pitch businesses whose public presence visibly lacks what you sell. Need beats want.</li>
-</ol>
-<div class="callout"><strong>QC check</strong>Quote, deposit and scope in writing before the job starts. Verbal deals are where local work goes wrong.</div>
-<div class="callout danger"><strong>Kill rule</strong>Any job with liability you can't price or skill you don't honestly have: refer it out. One bad job costs more than ten good ones earn.</div>
-<div class="callout"><strong>Track this playbook</strong><p style="color:var(--muted);margin:0">Keep a jobs tracker — inquiry, quote, deposit, booked, done, reviewed — pin a dashboard of quotes waiting and jobs this week, and use payment alerts plus a weekly sweep cron so no finished job misses its one review ask. Income from every job goes in the ledger. <a class="back" href="#/track">Crons &amp; Dashboards →</a> · <a class="back" href="#/money-ops">Money Ops →</a></p></div>
-<details class="acc" style="margin-top:20px"><summary><div><h3>Deep dive: quote, scope &amp; review system</h3><p>The written bits that stop local work going wrong.</p></div><span class="chev">+</span></summary><div class="acc-body"><b>Quote template (in writing, before work)</b><p>Job · flat price · deposit · what is included · what is not · parts policy (who buys, any sourcing fee agreed in advance) · timing. If it is not in the quote, it is a future argument.</p><b>Scope honesty</b><p>Keep a public in-scope / out-of-scope list and honor it in replies. Referring out work you cannot do safely or legally protects the reviews that feed everything else.</p><b>Review system</b><p>One ask, after a finished happy job, with both review links in a single message. Log who has reviewed you and never ask them again. Pitch partners only where the need is visible on their own public presence.</p></div></details>
-<details class="acc" style="margin-top:20px"><summary><div><h3>Verified in the wild</h3><p>What other Muse users — not Muse Playbooks — have actually done, labeled by how solid the evidence is.</p></div><span class="chev">+</span></summary><div class="acc-body">
-<p><b>How to read the labels:</b> <b>Tested</b> — an independent user ran it and published what happened. <b>Reported</b> — the user says they use Muse this way; nobody independent has checked the results. <b>Announced</b> — from Meta's own announcement, not a user test. The four pilots below are Meta's own examples, told by Meta — treat the outcomes as the company's account, not an independent audit.</p>
-<p><span class="status announced">Announced</span> <b>A grooming company read 87,000 reviews in minutes.</b> Meta's pilot account: a pet grooming company had Muse analyze roughly 87,000 customer reviews and produce a strengths-and-weaknesses analysis in minutes — work that would take a person weeks. For a local service, that is your own review profile, mined: what customers praise, what they complain about, in one sitting. <i>Source: <a href="https://www.uschamber.com/co/good-company/the-leap/meta-muse-small-business-ai" target="_blank" rel="noopener">Small business pilots — Bennett Orchards and Live Bearded</a>.</i></p>
-<p><span class="status announced">Announced</span> <b>A farm operator using Muse as the office help.</b> In Meta's pilots, a farm operator uses Muse as a general assistant for the tasks around the real work, freeing their own hours for the work only they can do. That is the local-services pattern exactly: the owner does the job, Muse carries the admin around it. <i>Source: <a href="https://www.uschamber.com/co/good-company/the-leap/meta-muse-small-business-ai" target="_blank" rel="noopener">Small business pilots — Bennett Orchards and Live Bearded</a>.</i></p>
-<p><span class="status announced">Announced</span> <b>A grocery owner putting Muse on back-office roles.</b> Meta describes a grocery store owner using Muse across back-office jobs — the paperwork, ordering and admin layer of a small shop. If you run a small local operation, that layer is where your evenings go; it is also the layer most safe to hand over first. <i>Source: <a href="https://smallbiztrends.com/meta-launches-muse-ai-agent-for-small-business-workflows/" target="_blank" rel="noopener">Small business pilots — grocery and boutique</a>.</i></p>
-<p><span class="status announced">Announced</span> <b>A boutique owner who had Muse audit the email automations.</b> In Meta's account, a boutique owner had Muse go through their existing email automations, audit what was actually running, and rebuild the flows with tracking added. For a local business with a neglected email list or follow-up flow, an audit-and-rebuild is a concrete first job to hand over. <i>Source: <a href="https://smallbiztrends.com/meta-launches-muse-ai-agent-for-small-business-workflows/" target="_blank" rel="noopener">Small business pilots — grocery and boutique</a>.</i></p>
-<p><span class="status">Reported</span> <b>Deal and inquiry email, tracked instead of buried.</b> Creators report having Muse track their brand-deal email — what came in, what is waiting, what is owed. Translate that to local work and it is quote requests and follow-ups: the inquiries that decide whether a week is booked rarely get a system, and they should. <i>Source: <a href="https://scoop.app/blog/influencer/marketing/meta-muse-instagram-influencer-marketing.html" target="_blank" rel="noopener">Creator social media and brand deal tracking</a>.</i></p>
-</div></details>
-</main>
+<main class="view" id="view-pb-local"><a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Local · November 10, 2026</p><h2>Local Services</h2><p class="lead">Local work pays fastest when you quote in writing, take a deposit, and ask for one review after a happy job. We tested that exact system on real jobs. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=local">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="callout"><strong>No money promise</strong><p style="color:var(--muted);margin:0">Income figures on this site are typical ranges for general information, not a promise of earnings.</p></div><div class="btns"><a class="btn primary" href="#weekly-letter">Join the letter — free</a><a class="btn" href="#/playbooks">Back to all playbooks</a></div></main>
 
 <!-- ADVANCED PROMPTS -->
 <main class="view" id="view-advanced">
-<a class="back" href="#/">← Home</a><p class="kicker" style="margin-top:16px">For experienced users</p><h2>Advanced Prompts</h2><p class="lead">Full-length prompts with the context, phases, scoring, output format and QC gates built in. Replace every [bracket] with your real inputs before you run one. Step-by-step guides are below the prompts.</p>
+<a class="back" href="#/">← Home</a><p class="kicker" style="margin-top:16px">For experienced users</p><h2>Advanced Prompts</h2><p class="lead">The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. The site shows what each prompt does. <a class="back" href="#/tasks">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">CAREER</span><h3>Job Hunt — Full Pipeline</h3><p>Score, verify, tailor and QC multiple applications in one run, under a no-guessing rule.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> your resume, pay floor, work type, and standing screening answers.</p>
-<div class="prompt-box adv"><span>Act as a senior job search strategist and application QC reviewer. Work in phases and do not skip ahead.
-
-MY INPUTS
-- Resume: [paste full resume]
-- Pay floor: [$ amount] — drop anything below it without discussion
-- Work type: [remote / hybrid / onsite + location or time zone]
-- Must-haves: [benefits, schedule, industry limits]
-- Standing screening answers: [work authorization, sponsorship, clearance, earliest start date, reason for leaving]
-
-PHASE 1 — SCORE (do not draft anything yet)
-Score every role I give you out of 100: skills match 40, pay vs floor 25, work-type fit 15, growth 10, red flags minus 10 each (vague pay, reposted 3+ times, duties far outside the title). Output a ranked table: Role | Score | Best evidence from my resume | Biggest gap | Verdict: apply / stretch / skip.
-
-PHASE 2 — VERIFY
-For apply verdicts only, check the employer's own careers page. Confirm title, pay range, work type and closing date. Flag anything the aggregator listing got wrong.
-
-PHASE 3 — TAILOR
-Draft the application using only facts from my resume, reframed in the posting's language. Map each requirement to my proof in a side table. Invent nothing: no employers, dates, metrics, tools or certifications I do not have. Certifications in progress are written as in progress.
-
-PHASE 4 — QC GATE
-Re-check name, contact, work history, education, salary, and the exact company and title. List every screening question my standing answers do not cover and STOP — I answer those, you never guess.
-
-DELIVER: ranked table, tailored draft, requirement-to-proof map, QC report, and my top 3 next actions.</span><button class="copy-btn">Copy</button></div>
+<p>Scores every role against your floor, verifies it on the employer's own page, tailors the application, and runs a QC gate before anything goes out.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=career">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">FREELANCE</span><h3>Freelance Proposal — Fit Check to Final Draft</h3><p>Scores the job post first, turns ambiguities into questions, then writes a proposal a busy client can approve in one read.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the full job post, your 2–3 closest proof samples, your price, and your scope cap in hours.</p>
-<div class="prompt-box adv"><span>Act as a freelance proposal strategist for documentation and SOP work. Goal: a proposal a busy client can approve in one read.
-
-INPUTS
-- Job post: [paste full post]
-- My proof: [2–3 closest samples or results]
-- Price: [fixed price or rate] — Scope cap: [hours] max
-
-STEP 1 — FIT CHECK
-Score the post out of 100: skill match, scope clarity, budget fit, client signals (work history, payment verified, specific vs vague). Under 60, tell me to pass and why, in 3 lines max.
-
-STEP 2 — GAP LIST
-List every ambiguity that changes price or timeline (page count, source material quality, review rounds, tools, deadline). Turn each into ONE clarifying question I can paste. Do not assume answers.
-
-STEP 3 — PROPOSAL (my voice: short, plain, no corporate filler)
-1) Open on THEIR problem in one sentence, taken from the post.
-2) Proof: the closest sample plus one measurable result.
-3) Plan: deliverable, format, milestones, what I need from them.
-4) Price: the fixed scope at [amount]; what is NOT included, priced separately.
-5) Close: one clear next step and a start date.
-
-STEP 4 — RISK PASS
-Flag scope-creep traps in the post, rewrite any promise I cannot keep, and cut every sentence that sounds like a template.
-
-DELIVER: fit score, gap questions, the final proposal under 250 words, and an 80-word version for quick-apply forms. Stage everything — do not send.</span><button class="copy-btn">Copy</button></div>
+<p>Checks fit, lists the gaps that change price or timeline, drafts the proposal in your voice, and flags scope-creep traps.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=documents">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">PUBLISHING</span><h3>KDP — Validate, Spec, Metadata, Launch QC</h3><p>The whole book pipeline in one prompt, with a hard validation gate before any building starts.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the theme, the audience, and the format (for example, large-print word search).</p>
-<div class="prompt-box adv"><span>Act as a KDP publishing analyst and production lead. No building until validation passes. Work in phases.
-
-THEME: [theme / audience / format]
-
-PHASE 1 — VALIDATE
-Find the top 10 competing titles. For each: Best Sellers Rank, price, review count, publication date, publisher type (independent or house). PASS only if most of the top 5 rank under 100,000 AND at least 3 titles are recent with real reviews. One hit among dead titles = FAIL (luck, not a niche). Label any third-party sales figure as a model estimate, not verified sales. Verdict first, evidence table second. If FAIL, stop and give me 3 adjacent themes worth testing instead.
-
-PHASE 2 — SPEC (only after PASS)
-Write the full build spec: trim size, page count, puzzle count and difficulty curve, solution pages, margins and bleed, interior rules (solver-verified 100%, no exceptions). Cover brief: title readable at 200px wide, one clear theme image, high contrast, badges (puzzle count, Large Print) placed to survive the thumbnail crop.
-
-PHASE 3 — METADATA
-Title and subtitle using the search terms buyers actually type, 7 backend keyword phrases, 2 categories, and a description that states contents, count and who it is for — no hype words, no unprovable claims.
-
-PHASE 4 — PRE-LAUNCH QC
-Checklist: solver pass on 100% of puzzles, the exported file read page by page (instructions page in full), thumbnail test passed, AI-content disclosure answered accurately for each element.
-
-DELIVER: verdict with evidence, build spec, metadata pack, QC checklist with pass / fail per line.</span><button class="copy-btn">Copy</button></div>
+<p>Validates the theme, writes the build spec, packs the metadata, and runs a pre-launch QC pass.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=puzzle">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">CREATIVE</span><h3>Adobe Stock — Batch System</h3><p>Matrix planning, a scored 100% zoom QC rubric, and the upload CSV, run as one batch process.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> subjects, settings, styles, and the batch cap (20 is the standard ceiling).</p>
-<div class="prompt-box adv"><span>Act as a stock media producer running a weekly batch system. Consistency and QC beat volume.
-
-BATCH INPUTS
-- Subjects: [list] — Settings: [list] — Styles: [list]
-- Cap: 20 assets this session
-
-STEP 1 — MATRIX
-Build the subject x setting x style matrix. Fill cells to cover buyer demand, and mark near-duplicates before generating — assets in one batch must not compete with each other in search.
-
-STEP 2 — GENERATE TO THE MATRIX
-One asset per planned cell. Keep a manifest as you go: filename, cell, prompt used.
-
-STEP 3 — QC AT 100% ZOOM (score every asset)
-Rubric per asset: anatomy and hands, text artifacts, edges, lighting logic, commercial usability. Score out of 10. 8+ ships, 6–7 gets one fix attempt, under 6 is rejected and logged with the reason. No thumbnail approvals.
-
-STEP 4 — METADATA CSV
-Output CSV columns exactly: filename, title, keywords, category. Titles written the way a buyer searches (subject + setting + use). 15–25 relevant keywords per asset, ordered by importance. No stuffing, no brand names.
-
-STEP 5 — BATCH REPORT
-Shipped / fixed / rejected counts, rejection patterns, and one change for the next batch. Track per-category results across batches: two flat batches in a category = rotate it out.
-
-DELIVER: matrix, manifest, per-asset QC scores, upload-ready CSV, batch report.</span><button class="copy-btn">Copy</button></div>
+<p>Plans the batch matrix, generates to it, scores every asset at full size, and outputs the metadata and batch report.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=stock">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">LOCAL</span><h3>Local Services — Intake to Review</h3><p>Scope check, written quote, booking messages and the one-time review ask, all under your service rules.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> services offered, out-of-scope list, service area, deposit, and both review links.</p>
-<div class="prompt-box adv"><span>Act as an operations assistant for a local services business. Everything in writing, nothing assumed.
-
-MY RULES
-- Services offered: [list] — Out of scope: [list — these get an honest pointer, never a pitch]
-- Service area: [towns] — Deposit: [amount or %] — Review links: [Google + community]
-
-JOB INTAKE — for each inquiry give me:
-1) In scope or out, with the one-line reason.
-2) The missing information that changes the quote, as short questions to ask the customer.
-3) A flat quote in writing: job, price, deposit, what is included, what is NOT included, parts policy (who buys; any sourcing fee agreed BEFORE purchase), timing.
-
-BOOKING BLOCK
-A confirmation message (short, plain, human), a day-before reminder, and the post-job summary template: what was done, what to watch, follow-up terms if any.
-
-REVIEW + REFERRAL (after a finished, happy job only)
-One message containing BOTH review links. Check my reviewed list first: anyone who already reviewed gets no second ask, ever. Then draft partner outreach ONLY for businesses whose public pages visibly lack what I sell — need, not want.
-
-WEEKLY WRAP
-Jobs quoted / booked / done, dollars per job type, no-shows, and the one fix for next week.
-
-DELIVER each piece ready to copy. Draft and stage everything — nothing sends without my explicit go for that message.</span><button class="copy-btn">Copy</button></div>
+<p>Runs intake, written quotes, booking messages, the one-time review ask, and the weekly wrap.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=local">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">DOCUMENTS</span><h3>SOP / KBA — Production Document</h3><p>A full document build with a fixed structure, strict sourcing rules, and a QC pass reported line by line.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the task, audience, source material, system and version, and the format you need.</p>
-<div class="prompt-box adv"><span>Act as a senior technical writer producing a client-ready SOP / knowledge base article. My standard: a new hire can complete the task using only this document.
-
-INPUTS
-- Task: [task] — Audience: [role + skill level] — Source material: [paste notes, tickets, screenshot list]
-- System + version: [name] — Format: [KBA / SOP / training guide]
-
-STRUCTURE (use exactly this)
-1) Purpose — what this achieves, in 2 sentences.
-2) Audience + prerequisites — accounts, access, tools, before-you-start checks.
-3) Procedure — numbered steps, one action per step, exact UI labels in bold, the expected result after any step where the user could go wrong.
-4) Exceptions — the 3 most likely errors, what each one looks like, and the fix.
-5) Escalation — when to stop and who gets it next, with what information attached.
-6) Version block — owner, date, version, what changed.
-
-WRITING RULES
-Plain language, second person, present tense. No step may rely on "as shown above" or knowledge the reader has not been given. Every name, label and number must come from the source material — flag gaps as [MISSING: ...] instead of inventing them.
-
-QC PASS (run it and report the result)
-Step count vs source coverage, UI labels match the real system, no invented claims, reading level fits the audience, formatting preserved (headings, tables, callouts) because the formatting is part of the deliverable.
-
-DELIVER: the finished document, the gap list, and the QC report.</span><button class="copy-btn">Copy</button></div>
+<p>Turns notes into a client-ready SOP or knowledge-base article, with a QC pass.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=documents">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">RESEARCH</span><h3>Research — Decision Memo</h3><p>Evidence with sources and dates, bull case vs bear case, unit economics, and a kill metric set before you start.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the idea, niche or purchase you are deciding on.</p>
-<div class="prompt-box adv"><span>Act as a research analyst. I am deciding whether to spend time or money on [idea / niche / purchase]. Give me a decision memo I can act on, not a summary.
-
-FRAME THE QUESTION
-Restate the decision, the amount at stake (hours and dollars), and the date I must decide by. If any of those are missing, ask before researching.
-
-EVIDENCE (cite sources with dates for every load-bearing claim)
-- Market: who already sells this, prices, review counts, sales rank or volume signals where available.
-- Demand trend: growing, flat or fading — with the evidence, not a vibe.
-- Economics: realistic revenue per sale or per hour, platform fees, costs, tax set-aside. Median case, not best case.
-
-BOTH CASES
-Bull case: the strongest honest argument for, with numbers.
-Bear case: the strongest honest argument against, with numbers.
-Name the single assumption each case depends on.
-
-SENSITIVITY
-What has to be true for this to beat my current best option? What result at 2 weeks and at 30 days means KILL?
-
-VERDICT
-GO / TEST / NO-GO. If TEST: the test design (budget, duration, pass metric). If GO: my first 3 actions. Label every estimate as an estimate and every third-party sales figure as a model guess. List your sources in the order of the weight you gave them.</span><button class="copy-btn">Copy</button></div>
+<p>Frames the decision, gathers evidence with sources, argues both cases, and gives a GO / TEST / NO-GO verdict.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=research">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">SYSTEM</span><h3>Skill Builder — Turn a Workflow Into a Skill</h3><p>Converts a repeated job into saved instructions with triggers, approval gates, QC and failure modes — then test-runs it.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> a description of the job, or notes from the last 3 times you did it.</p>
-<div class="prompt-box adv"><span>Act as a systems designer. Turn my repeated workflow into a reusable skill Muse can run the same way every time.
-
-MY WORKFLOW: [describe the job, or paste notes from the last 3 times I did it]
-
-BUILD THE SKILL IN THIS ORDER
-1) Trigger — the exact requests that should invoke it, and the near-misses that should NOT.
-2) Inputs — everything the skill must collect before starting, and what to do when one is missing (ask once, grouped — never drip questions mid-run).
-3) Rules — my non-negotiables: floors, formats, forbidden moves, approval points. Write each as a testable rule, not advice ("drop roles under $X", not "consider pay").
-4) Steps — numbered, in execution order, each with its output.
-5) Output format — the exact shape of the deliverable, with a filled example from my real work.
-6) QC checklist — pass / fail lines the skill checks against its own output before showing me anything.
-7) Failure modes — the 3 ways this job goes wrong, and the skill's response to each (stop, flag, reroute — never silently guess).
-8) Approval gates — what the skill may do alone vs what waits for my explicit go (sends, submits and payments always wait).
-
-THEN: run the skill on one real example from my work, show the output, and list where the skill itself needs tightening.
-
-DELIVER: the complete skill text, ready to save, plus the test run and its QC result.</span><button class="copy-btn">Copy</button></div>
+<p>Turns a repeated workflow into a reusable skill, then tests it on a real example.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=automation">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">QUALITY</span><h3>QC Audit — Adversarial Check</h3><p>An auditor prompt that hunts invented claims, mismatched numbers and silent truncation, and fails loudly.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the document, application, file or page to audit, and the source it was built from.</p>
-<div class="prompt-box adv"><span>Act as an adversarial QC auditor. Your job is to find what is wrong, not to be encouraging. Audit [the document / application / file / page] against [its source].
-
-CHECK IN THIS ORDER
-1) Numbers — every figure, date, price and count traced to the source. List each one: value, source location, match or MISMATCH.
-2) Names + claims — every name, title, credential and result claim. Anything not in the source is flagged as INVENTED, even if it sounds plausible.
-3) Completeness — content the source has that the output dropped, and output content with no source. Truncation hides in wrapped text, instruction pages and disclaimers — read those in full.
-4) Internal consistency — totals that do not add up, steps referenced but missing, promises made in one section and contradicted in another.
-5) Format — headings, tables, links and badges intact in the EXPORTED file, not the editor view.
-
-SCORING
-Give each section PASS or FAIL with the defect list by location (page / section / line). No global "looks good." A single invented claim or mismatched number = overall FAIL.
-
-OUTPUT: a defect table (location | defect | severity | fix), then the corrected version of only the failing sections. If you cannot verify something, say UNVERIFIED — do not fill the gap.</span><button class="copy-btn">Copy</button></div>
+<p>Audits a document against its source, scores each section, and lists every defect with a fix.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=documents">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">MONEY</span><h3>Money Ops — Ledger Audit &amp; Monthly Close</h3><p>Reconciles the ledger against real deposits, recomputes the set-aside line by line, and closes the month with a defect table.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> the month, your ledger, payout or deposit records, set-aside balance, and set-aside percentage.</p>
-<div class="prompt-box adv"><span>Act as a forensic bookkeeper auditing my side-income ledger for [month]. Accuracy over encouragement. Nothing is sent or paid; you audit and report.
-
-INPUTS
-- Ledger: [paste or attach the export]
-- Payout / deposit records for the month: [attach]
-- Set-aside account balance: [amount] — Set-aside rule: [30%] of profit
-- Categories: [your fixed list]
-
-STEP 1 — RECONCILE
-Match every income row to a deposit or payout record. List unmatched rows both ways: in the ledger with no deposit, and deposits with no ledger row.
-
-STEP 2 — SET-ASIDE MATH
-Recompute set-aside owed on the month's profit, line by line. Compare owed vs held and state the gap in dollars. Show the math; do not round it away.
-
-STEP 3 — EXPENSE PASS
-Every expense needs a category and a business purpose. Flag personal or mixed items, duplicates, and expenses with no receipt. Flag, do not silently recategorize.
-
-STEP 4 — DASHBOARD CHECK
-Compare every dashboard total against the ledger. Flag any panel whose reconciled date is stale, and any total that does not trace.
-
-STEP 5 — CLOSE REPORT
-Income, expenses, profit, set-aside status, next tax deadline, and a defect table (location | defect | fix) with corrected totals. Anything you cannot verify is marked UNVERIFIED, never estimated silently.
-
-DELIVER: reconciliation result, set-aside math, defect table, corrected monthly close.</span><button class="copy-btn">Copy</button></div>
+<p>Reconciles the ledger, recomputes the set-aside, checks expenses and the dashboard, and closes the month.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=money">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 <p style="margin:14px 0 0"><a class="back" href="#/money-ops">Open Money Ops: tax &amp; expense tracking →</a></p>
 </div></details>
 
-<section class="section"><h2>Advanced Guides — step by step</h2><p class="lead">Workflows, not prompts. Written generally, so each one works on whichever platform you choose.</p>
+<section class="section"><h2>Advanced Guides</h2><p class="lead">Workflows, not prompts. The site shows the problem and the outcome; the full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">FREELANCE</span><h3>Freelance Platform — Sign In to First Application</h3><p>The full setup on any freelance marketplace: account, profile, portfolio, then applying the right way.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Guide</span></p>
-<ol>
-<li><b>Pick one platform.</b> Choose the marketplace where buyers for your service already post jobs. One platform, fully set up, beats four half-finished profiles.</li>
-<li><b>Create the account and sign in securely.</b> Register with your real name and a business email you check daily. Use a strong, unique password and turn on two-factor authentication in the platform's security settings. Save your recovery method somewhere safe — a locked account mid-job is an emergency you can prevent.</li>
-<li><b>Complete whatever verification the platform asks for.</b> Confirm your email, and if the platform requires identity verification before you can work or get paid, do it once, early, through the platform's own flow only. Never send ID documents through chat or email links.</li>
-<li><b>Set up the profile: headline first.</b> Your headline names the outcome and the niche, not your job title — buyers search for results ("SOPs and training docs for ops teams"), not roles.</li>
-<li><b>Write the overview in four moves.</b> The problem you solve, your proof (samples and results, added next), your process in 3–4 lines, and one clear call to action. Plain language, short paragraphs — profiles are scanned, not read.</li>
-<li><b>Set skills, rate and availability.</b> Add the skill tags buyers actually search for, set your rate or starting price at your floor, and select your real availability. A profile that promises everything converts worse than one that promises one thing well.</li>
-<li><b>Add the portfolio.</b> Upload 3–5 samples in the platform's portfolio section (see the Proof Portfolio guide below). Each gets a descriptive title, two lines on what it was and for whom, and the result where you have one. Remove or redact client-confidential details; keep the professional formatting — it is part of the proof.</li>
-<li><b>Finish the business settings.</b> Add your payment method, complete any tax or payout forms the platform requires, and set notifications so new invitations and client messages reach you fast. Slow replies lose jobs that good profiles win.</li>
-<li><b>Build saved searches.</b> Filter job listings by your service, your minimum budget, and your maximum scope. Prefer clients with a work history and verified payment where the platform shows it. Save the search and check it on a schedule instead of scrolling the open feed.</li>
-<li><b>Evaluate before you apply.</b> Score each job: skill match, budget vs your floor, scope clarity, client signals. Vague scope at a low budget is the most expensive job on any platform — skip it.</li>
-<li><b>Apply through the platform's own flow.</b> Send a tailored proposal (the Advanced Proposal prompt on this page writes it): their problem, your closest proof, your plan, your price and scope, one next step. Answer every screening question honestly. Use the standard application cost where the platform charges credits — skip paid boosts until a lane is already converting.</li>
-<li><b>Log it and work the thread.</b> Record platform, client, job, date and status in your tracker. If the client replies, keep the conversation in that thread and on-platform, follow up once if it goes quiet, and never start work without the platform's contract or escrow step in place where it offers one.</li>
-<li><b>Review weekly.</b> Applications sent, reply rate, interviews, wins. Fix the weakest number first — usually the profile headline or the first two lines of the proposal — and cut job categories that never convert.</li>
-</ol>
+<p>Getting set up on a freelance platform and applying for the first time — account, profile, portfolio, and the first application, in that order.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=documents">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">PROOF</span><h3>Proof Portfolio — Build Once, Reuse Everywhere</h3><p>One master portfolio you can drop into any platform profile, proposal or page without rebuilding it.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Guide</span></p>
-<ol>
-<li><b>Pick your three strongest real pieces.</b> Finished, paid or shipped work beats practice pieces. If you are starting out, build three samples in your lane's real format, to a real standard.</li>
-<li><b>Sanitize without gutting.</b> Remove client names, personal data and anything confidential. Keep the layout, headings, tables and formatting exactly as delivered — on documentation and design work, the formatting is itself the sample.</li>
-<li><b>Write a case card for each piece.</b> Five lines: the problem, who it was for (generalized), what you delivered, the format, and the result — a number wherever an honest one exists.</li>
-<li><b>Export in platform-friendly forms.</b> Keep each piece as a clean PDF and, where it helps, a public view-only link. Name files clearly (Service-Type-Sample.pdf) so they still make sense detached from your profile.</li>
-<li><b>Keep a text version of every case card.</b> One document with all five-line summaries, ready to paste into profile fields, proposal forms and "about" sections that do not accept uploads.</li>
-<li><b>Store one master folder.</b> Portfolio pieces, case cards, your headline and overview text, and your rate/scope basics live in one place. Every platform profile is filled from this folder — never typed fresh from memory.</li>
-<li><b>Refresh after every paid job.</b> Swap the weakest sample out, update the result lines, and note which sample gets mentioned by clients. Within a few jobs, your portfolio stops being a guess and starts being evidence of what sells.</li>
-</ol>
+<p>Building a proof portfolio once, then reusing it on every platform — three strong pieces, sanitized, with a case card each.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 </section>
 </main>
@@ -938,7 +628,7 @@ DELIVER: reconciliation result, set-aside math, defect table, corrected monthly 
 <article class="task-card" data-cat="plan"><span class="task-cat">Plan</span><h3>Plan the tracking before the work starts</h3><p>Before I start [lane / project], set up how I will track it: the tracker fields, the pinned dashboard panels, and one weekly cron that reconciles both and reports only exceptions — overdue steps, missing items, upcoming deadlines. Show me the empty tracker and one example row.</p><div class="task-foot"><span hidden>Before I start [lane / project], set up how I will track it: the tracker fields, the pinned dashboard panels, and one weekly cron that reconciles both and reports only exceptions — overdue steps, missing items, upcoming deadlines. Show me the empty tracker and one example row.</span><button class="copy-btn light" type="button">Copy prompt</button></div></article>
 <article class="task-card" data-cat="automation"><span class="task-cat">Automation</span><h3>Set up a cron that updates my dashboard</h3><p>Create a weekly cron for [lane] on [day and time]: reconcile my tracker against [mail / notes / payments], update my pinned dashboard, stamp its reconciled date, and report only exceptions — overdue next steps, missing items, deadlines in the next 7 days. Flag anything ambiguous for my call, never guess, and never send or submit anything.</p><div class="task-foot"><span hidden>Create a weekly cron for [lane] on [day and time]: reconcile my tracker against [mail / notes / payments], update my pinned dashboard, stamp its reconciled date, and report only exceptions — overdue next steps, missing items, deadlines in the next 7 days. Flag anything ambiguous for my call, never guess, and never send or submit anything.</span><button class="copy-btn light" type="button">Copy prompt</button></div></article>
 </div>
-<p class="note">Full-length versions of these prompts, with phases, scoring and QC gates: <a class="back" href="#/advanced-prompts">Advanced Prompts →</a></p>
+<p class="note">What each prompt does, and the full prompt is free on the site: <a class="back" href="#/advanced-prompts">Advanced Prompts →</a> · <a class="back" href="#weekly-letter">Join the letter</a></p>
 </main>
 
 <!-- TOOLS -->
@@ -1043,13 +733,13 @@ DELIVER: reconciliation result, set-aside math, defect table, corrected monthly 
 
 <details class="acc" data-guide data-gcat="basics"><summary><div><span class="tag">Basics</span> <span class="status live">Live</span><h3 style="margin-top:8px">What Muse is</h3><p>Meta&rsquo;s personal AI agent, built to do multi-step work, not only answer questions.</p></div><span class="chev">+</span></summary><div class="acc-body"><p><b>Direct answer:</b> Muse is a personal AI agent from Meta. You give it a job and context, it works through the steps, uses tools and skills where they fit, and brings back a result for you to check and approve.</p><ol><li>Start with one clear job, not a topic: an outcome, a deadline and what done looks like.</li><li>Give context up front: your numbers, rules and source material.</li><li>Let Muse research, draft or build, then run the QC step before you use the result.</li><li>Approve the irreversible parts yourself: sends, payments and submissions stay yours.</li></ol><p class="guide-meta">Last updated: November 2026 · Status: Live</p></div></details>
 
-<details class="acc" data-guide data-gcat="basics"><summary><div><span class="tag">Basics</span> <span class="status live">Live</span><h3 style="margin-top:8px">Playbooks, skills and tasks: the three words Muse Playbooks uses</h3><p>Task is the job, playbook is the method, skill is the method saved for reuse.</p></div><span class="chev">+</span></summary><div class="acc-body"><p><b>Direct answer:</b> A <b>task</b> is one job with a prompt. A <b>playbook</b> is a tested method for a repeated job, with steps, a QC check and a kill rule. A <b>skill</b> is that playbook saved as instructions Muse applies on every run.</p><ol><li>Copy a single job from <a class="back" href="#/tasks">Tasks</a>.</li><li>Follow a full method in <a class="back" href="#/playbooks">Playbooks</a>.</li><li>Save the method once in <a class="back" href="#/skills">Skills</a> when you start repeating it.</li></ol><p class="guide-meta">Last updated: November 2026 · Status: Live</p></div></details>
+<details class="acc" data-guide data-gcat="basics"><summary><div><span class="tag">Basics</span> <span class="status live">Live</span><h3 style="margin-top:8px">Playbooks, skills and tasks: the three words Muse Playbooks uses</h3><p>Task is the job, playbook is the method, skill is the method saved for reuse.</p></div><span class="chev">+</span></summary><div class="acc-body"><p><b>Direct answer:</b> A <b>task</b> is one job with a prompt. A <b>playbook</b> is a tested method: the problem, the outcome, and one proof line. A <b>skill</b> is that playbook saved as instructions Muse applies on every run.</p><ol><li>Copy a single job from <a class="back" href="#/tasks">Tasks</a>.</li><li>Follow a full method in <a class="back" href="#/playbooks">Playbooks</a>.</li><li>Save the method once in <a class="back" href="#/skills">Skills</a> when you start repeating it.</li></ol><p class="guide-meta">Last updated: November 2026 · Status: Live</p></div></details>
 
 <details class="acc" data-guide data-gcat="tutorial"><summary><div><span class="tag">Tutorial</span> <span class="status live">Live</span><h3 style="margin-top:8px">First 15 minutes with Muse</h3><p>One small real job, end to end, beats an hour of reading about features.</p></div><span class="chev">+</span></summary><div class="acc-body"><p><b>Direct answer:</b> In 15 minutes you can get one finished, checked result: pick a small job you already need done, give Muse your numbers and source material, run it, then QC the output before you use it.</p><ol><li><b>Minutes 0–2:</b> confirm Settings — email, time zone, plan, balance — and redeem a code if you have one.</li><li><b>Minutes 2–4:</b> give Muse one standing rule and ask it to repeat back exactly what it saved.</li><li><b>Minutes 4–6:</b> pick one small job you already need, with a one-sentence definition of done.</li><li><b>Minutes 6–11:</b> run it with your numbers and source material, and end the prompt with a QC instruction.</li><li><b>Minutes 11–13:</b> read the result against the source yourself, open any file it made, fix one thing.</li><li><b>Minutes 13–15:</b> log one tracker line — date, job, result, keep / fix / kill — and save the prompt if it worked.</li></ol><p class="guide-meta">Last updated: November 2026 · Status: Live</p><p><a class="back" href="#/new-to-muse">New to Muse: the 4-step start →</a></p></div></details>
 
 <details class="acc" data-guide data-gcat="tutorial"><summary><div><span class="tag">Tutorial</span> <span class="status live">Live</span><h3 style="margin-top:8px">Run your first playbook</h3><p>Pick one lane, set the numbers, do step 1 today, log keep / fix / kill after 7 days.</p></div><span class="chev">+</span></summary><div class="acc-body"><p><b>Direct answer:</b> A playbook only works in order: numbers first, steps second, QC before you ship, and a dated keep / fix / kill call at the end of the first week.</p><ol><li>Choose one lane in <a class="back" href="#/hustles">Hustles</a> by time to first dollar.</li><li>Write down expected dollars, weekly hours and your kill rule before starting.</li><li>Run the matching playbook step by step and complete the QC check.</li><li>After 7 days, decide keep, fix or kill from the numbers you logged.</li></ol><p class="guide-meta">Last updated: November 2026 · Status: Live</p></div></details>
 
-<details class="acc" data-guide data-gcat="workflow"><summary><div><span class="tag">Workflow</span> <span class="status live">Live</span><h3 style="margin-top:8px">Playbooks as a workflow: job hunt, KDP, stock, local services and Upwork MCP</h3><p>Five lanes, one pattern: validate, build, QC, ship, log.</p></div><span class="chev">+</span></summary><div class="acc-body"><p><b>Direct answer:</b> Every Muse Playbooks playbook runs the same loop, only the lane changes: set the numbers, validate before building, produce in small batches, QC against the source, ship, and log the result.</p><ol><li><b>Job Hunt:</b> floor first, verify on the employer page, QC before submit.</li><li><b>KDP Puzzle Books:</b> pass the sales-rank test before building, solver-check every puzzle.</li><li><b>Adobe Stock:</b> small weekly batches, 100% zoom QC, CSV built as you go.</li><li><b>Local Services:</b> quote and deposit in writing before work, one review ask after.</li><li><b>Upwork MCP:</b> connect through the official MCP, one proposal at a time, QC before sending.</li></ol><p class="guide-meta">Last updated: November 2026 · Status: Live</p><p><a class="back" href="#/playbooks">Open the Playbooks directory →</a></p></div></details>
+<details class="acc" data-guide data-gcat="workflow"><summary><div><span class="tag">Workflow</span> <span class="status live">Live</span><h3 style="margin-top:8px">Playbooks as a workflow: job hunt, KDP, stock, local services and Upwork</h3><p>Five lanes, one pattern: the problem, the outcome, and one proof line.</p></div><span class="chev">+</span></summary><div class="acc-body"><p><b>Direct answer:</b> Every playbook runs the same loop, only the lane changes: the problem, the outcome, and one proof line. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first.</p><p>Five lanes, one pattern: each playbook shows the problem, the outcome, and one proof line. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first.</p><p class="guide-meta">Last updated: November 2026 · Status: Live</p><p><a class="back" href="#/playbooks">Open the Playbooks directory →</a></p></div></details>
 
 <details class="acc" data-guide data-gcat="workflow"><summary><div><span class="tag">Workflow</span> <span class="status live">Live</span><h3 style="margin-top:8px">Money Ops workflow: track taxes and expenses with Muse</h3><p>The ledger is the system. A dashboard and crons are add-ons that make it easier to read and keep current.</p></div><span class="chev">+</span></summary><div class="acc-body"><p><b>Direct answer:</b> Money Ops starts with one thing: a ledger where every payment and expense is logged the day it happens, with the tax set-aside moved on each payment. That ledger stands on its own. Two add-ons build on it: a dashboard built from the ledger, so you can read the totals at a glance — one dashboard example among several — and crons that reconcile the ledger on a schedule and report only exceptions.</p><ol><li>Log the payment: date, source, gross, fees, net.</li><li>Move the set-aside, 30% of profit as the working rule, before the rest is touched.</li><li>Optional: build the tax dashboard from the ledger and pin it; show the last-reconciled date on it.</li><li>Optional: set the weekly sweep and the set-aside check as crons; flag ambiguous items, never guess a category.</li></ol><p class="guide-meta">Last updated: November 2026 · Status: Live</p><p><a class="back" href="#/money-ops">Open Money Ops →</a> · <a class="back" href="#/track">Crons &amp; Dashboards: the general guide and all dashboard examples →</a></p></div></details>
 
@@ -1191,7 +881,7 @@ DELIVER: reconciliation result, set-aside math, defect table, corrected monthly 
 <li><b>Day 1 — Pick one lane</b> using the table above and your honest hours.</li>
 <li><b>Day 2 — Set your numbers:</b> pay floor, weekly cap, tax set-aside.</li>
 <li><b>Day 3 — Build proof:</b> one sample, portfolio piece or services page.</li>
-<li><b>Day 4 — Run the playbook</b> for that lane, steps in order.</li>
+<li><b>Day 4 — Read the playbook</b> for that lane. The full method is free on the site. <a class="back" href="#/tasks">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></li>
 <li><b>Day 5 — Ship something:</b> an application, a listing, a quote, a batch.</li>
 <li><b>Day 6 — Log the result,</b> including the misses.</li>
 <li><b>Day 7 — Keep, fix, or kill.</b> Decide with numbers, not mood.</li>
@@ -1342,28 +1032,7 @@ DELIVER: reconciliation result, set-aside math, defect table, corrected monthly 
 
 <details class="acc"><summary><div><span class="meta" style="font-family:var(--font-mono);font-size:12px;color:var(--accent)">MONEY</span><h3>Advanced prompt: set up tax tracking end to end</h3><p>The ledger, the tax dashboard built from it, and the crons that keep both current — in one setup run.</p></div><span class="chev">+</span></summary><div class="acc-body">
 <p><span class="tier">Advanced</span></p>
-<p><b>Replace first:</b> your income lanes, set-aside percentage, expense categories, and the tax deadlines you track.</p>
-<div class="prompt-box adv"><span>Act as my money operations system designer. Build three connected pieces: a tax and expense ledger, a pinned dashboard, and the crons that keep both current. Nothing sends, pays or submits; you build, log and report.
-
-MY INPUTS
-- Income lanes: [list each lane / business separately]
-- Set-aside rule: [30%] of profit, moved on every payment
-- Expense categories: [fees, software, tools, supplies, mileage, other, or your list]
-- Tax deadlines I track: [quarterly estimate dates and renewals]
-
-PIECE 1 — LEDGER
-Fields per entry: date, lane, type (income / expense), source or vendor, gross, fees, net, category, purpose, receipt (yes / no). One ledger per business where tax reporting is separate. Show me the empty structure and one filled example row per type before logging anything real.
-
-PIECE 2 — PINNED DASHBOARD
-Panels in this order: income this month and YTD by lane; set-aside owed vs held with the gap flagged; expenses by category; open items (uncategorized, missing receipts); next deadlines; lane status keep / fix / kill. Every total must trace to the ledger, and the dashboard shows its last-reconciled date. Main view is money only; personal trackers go on a separate tab.
-
-PIECE 3 — CRONS
-Schedule: weekly expense sweep [day + time], set-aside check every 2 weeks, deadline watch weekly. Each cron reconciles, updates the dashboard, and reports only exceptions: set-aside gap, uncategorized items, missed deadlines. Ambiguous items are flagged for my decision, never guessed. A cron tied to a lane I kill gets deleted in the same run.
-
-QC GATE
-Ledger totals equal dashboard totals; set-aside math shown line by line; every cron has a stated schedule, input, output and stop condition. List anything you could not verify instead of filling the gap.
-
-DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my first 3 setup actions.</span><button class="copy-btn">Copy</button></div>
+<p>Designs your money system: the ledger, the pinned dashboard, and the crons that keep them current.</p><p>The full method is free on the site. The letter is for the latest news, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#weekly-letter">Join the letter for the latest news →</a></p>
 </div></details>
 </main>
 
@@ -1449,11 +1118,11 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
 
 <h3>3. Your first 15 minutes</h3><p><b>Minutes 0–2:</b> confirm Settings — email, time zone, plan, balance — and redeem a code if you have one. <b>Minutes 2–4:</b> give Muse one standing rule (your floor, your hours, or “drafts wait for my approval”) and ask it to repeat back exactly what it saved. <b>Minutes 4–6:</b> pick one small job you already need, with a one-sentence definition of done. <b>Minutes 6–11:</b> run it with your numbers and source material, and end the prompt with a QC instruction: check every name, date and number against the source, flag anything guessed. <b>Minutes 11–13:</b> read the result against the source yourself, open any file it made, fix one thing. <b>Minutes 13–15:</b> log one tracker line — date, job, result, keep / fix / kill — and save the prompt if it worked.</p>
 
-<h3>4. The words, in one pass</h3><p>A <b>task</b> is one job with a prompt. A <b>playbook</b> is a tested method for a repeated job: goal, setup numbers, numbered steps, a QC check, and a kill rule. A <b>skill</b> is that playbook saved as instructions Muse reuses every run. A <b>tracker or ledger</b> is one row per item — application, job, book, batch, payment — with status and next step. A <b>dashboard</b> is one pinned page built from that tracker, with its last-reconciled date at the top. A <b>cron</b> is a scheduled job that reconciles the tracker, refreshes the dashboard, and reports only exceptions. Crons draft, log and alert; they never send, pay or submit.</p>
+<h3>4. The words, in one pass</h3><p>A <b>task</b> is one job with a prompt. A <b>playbook</b> is a tested method for a repeated job: the problem, the outcome, and one proof line. A <b>skill</b> is that playbook saved as instructions Muse reuses every run. A <b>tracker or ledger</b> is one row per item — application, job, book, batch, payment — with status and next step. A <b>dashboard</b> is one pinned page built from that tracker, with its last-reconciled date at the top. A <b>cron</b> is a scheduled job that reconciles the tracker, refreshes the dashboard, and reports only exceptions. Crons draft, log and alert; they never send, pay or submit.</p>
 
 <h3>5. Set your numbers before you start a lane</h3><p>Write down three numbers: <b>expected dollars</b> (realistic, not best case), <b>time to first dollar</b>, and <b>hours per week</b> you can honestly give it. Add your pay or price floor, and a kill rule — the result after which you stop that lane. If you cannot put a real number on expected dollars, treat it as a hobby, not a plan. Compare lanes on the <a class="back" href="#/hustles">Hustles</a> page.</p>
 
-<h3>6. Run one playbook</h3><p>Pick one lane only. Job Hunt: floor first, verify on the employer's own page, QC before submit, never guess a screening answer. KDP Puzzle Books: pass the sales-rank test before building, solver-check every puzzle, test the cover at thumbnail size. Adobe Stock: small weekly batches, QC at 100% zoom, build the CSV as you go. Local Services: quote and deposit in writing before work, one review ask after a happy job, never a second ask to someone who already reviewed you. Upwork MCP: connect through the official MCP, one proposal at a time, QC before sending. Full steps are in <a class="back" href="#/playbooks">Playbooks</a>, each with a Verified in the wild section labeled Tested, Reported, or Announced by Meta, with source links.</p>
+<h3>6. Run one playbook</h3><p>Pick one lane only. The site shows you the lane — the problem, the outcome, and one proof line. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/playbooks">Browse the playbooks</a> and join the letter for the latest news on your lane.</p>
 
 <h3>7. Track from day one</h3><p>Start the tracker the same day the work happens. Build the dashboard from the tracker only — no hand-typed totals. Pin it. Set one weekly cron to reconcile it and report only gaps, overdue next steps, and deadlines in the next 7 days. For money, keep one ledger per business, log every payment and expense the day it happens, and move the tax set-aside — Muse Playbooks's working rule is 30% of profit — before the rest is touched. Full setup: <a class="back" href="#/track">Crons &amp; Dashboards</a> and <a class="back" href="#/money-ops">Track Taxes &amp; Expenses</a>.</p>
 
@@ -1525,7 +1194,7 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
     {t:"New to Muse: interactive first week checklist — tick off Days 1 to 7",h:"#/new-to-muse"},
     {t:"New to Muse — what Muse, a playbook and a skill are",h:"#/new-to-muse"},
     {t:"Playbooks directory",h:"#/playbooks"},
-    {t:"Playbook: Job Hunt — Any Work Type",h:"#/playbooks/job-hunt"},{t:"Playbook: Upwork MCP — Connect Muse to Upwork the Official Way",h:"/playbooks/upwork-mcp/"},{t:"Muse News — Daily News, Ban Tracker & Field Discoveries",h:"/news/"},
+    {t:"Playbook: Job Hunt — Any Work Type",h:"#/playbooks/job-hunt"},{t:"Playbook: Upwork Playbook — one proposal, another way",h:"/playbooks/upwork-mcp/"},{t:"Muse News — Daily News, Ban Tracker & Field Discoveries",h:"/news/"},
     {t:"Playbook: KDP Puzzle Books",h:"#/playbooks/kdp"},
     {t:"Playbook: Adobe Stock Batches",h:"#/playbooks/adobe-stock"},
     {t:"Playbook: Local Services",h:"#/playbooks/local-services"},
@@ -1535,7 +1204,7 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
     {t:"Tasks: Puzzle Books — validate a niche, build a word search, cover design",h:"#/tasks?filter=puzzle"},
     {t:"Tasks: Documents — SOPs, meeting actions, document QC",h:"#/tasks?filter=documents"},
     {t:"Tasks: Job Hunt — rank roles, tailor applications, interview prep",h:"#/tasks?filter=career"},
-    {t:"Tasks: Stock Media — batch planning and 100% zoom QC",h:"#/tasks?filter=stock"},
+    {t:"Tasks: Stock Media — batch planning and full-size checks",h:"#/tasks?filter=stock"},
     {t:"Tasks: Local Services — written quotes and the review ask",h:"#/tasks?filter=local"},
     {t:"Tasks: Research — demand tests, decision memos, verify a claim",h:"#/tasks?filter=research"},
     {t:"Tasks: Money Ops — log payments, monthly close, affordability check",h:"#/tasks?filter=money"},
@@ -1566,11 +1235,11 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
     {t:"Guide: Availability by country, Mac computer use — Access",h:"#/guides?filter=access"},
     {t:"Guide: WhatsApp setup, memory, connectors and permissions — Settings",h:"#/guides?filter=settings"},
     {t:"Guide: Connect 2026 announcements, Muse Updates track — News",h:"#/guides?filter=news"},
-    {t:"Advanced Prompts — full-length prompts for experienced users",h:"#/advanced-prompts"},
-    {t:"Advanced prompt: Job Hunt full pipeline — score, verify, tailor, QC",h:"#/advanced-prompts"},
-    {t:"Advanced prompt: Freelance proposal — fit check, gaps, draft, risk pass",h:"#/advanced-prompts"},
-    {t:"Advanced prompt: KDP validate, spec, metadata, launch QC",h:"#/advanced-prompts"},
-    {t:"Advanced prompt: Adobe Stock batch system with QC rubric and CSV",h:"#/advanced-prompts"},
+    {t:"Advanced Prompts — what each prompt does, with the full method free on the site",h:"#/advanced-prompts"},
+    {t:"Advanced prompt: Job Hunt full pipeline — what it does",h:"#/advanced-prompts"},
+    {t:"Advanced prompt: Freelance proposal — what it does",h:"#/advanced-prompts"},
+    {t:"Advanced prompt: KDP — what it does",h:"#/advanced-prompts"},
+    {t:"Advanced prompt: Adobe Stock batch system — what it does",h:"#/advanced-prompts"},
     {t:"Advanced prompt: Local services — intake, quote, booking, review",h:"#/advanced-prompts"},
     {t:"Advanced prompt: SOP / KBA production document",h:"#/advanced-prompts"},
     {t:"Advanced prompt: Research decision memo — bull case, bear case, verdict",h:"#/advanced-prompts"},
@@ -1700,15 +1369,13 @@ DELIVER: the ledger structure, the dashboard spec, the cron schedule, and my fir
   // Terminal typing
   var lines=[
     "$ museplaybooks run playbook:job-hunt",
-    "  floor set · work type: any · verify at source ✓",
-    "  qc before submit: name / history / salary ✓",
+    "  the floor is set · every application checked ✓",
     "$ museplaybooks run playbook:kdp",
-    "  niche rank test: PASS · solver check: 90/90 ✓",
-    "  cover thumbnail test @200px: readable ✓",
+    "  one theme tested first · then built ✓",
     "$ museplaybooks run hustles --compare",
     "  expected $ · time to first $ · effort — pick ONE lane",
     "$ museplaybooks run money-ops --sweep",
-    "  ledger reconciled · set-aside held: 30% ✓",
+    "  ledger reconciled · set-aside held ✓",
     "$ museplaybooks log --week",
     "  shipped: 1 · failed: 1 · lesson: validate before you build"
   ];
