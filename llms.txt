@@ -3,6 +3,7 @@
 > Muse Playbooks turns real experiments with Meta Muse into reusable playbooks for job hunting, freelance work, digital products and local services. Every method comes with steps, a quality check and a kill rule. Independent community resource. Not affiliated with or endorsed by Meta.
 
 ## Start here
+- [How to use Muse AI](https://museplaybooks.com/guides/how-to-use-muse/): the 5-step guide to using Muse, with prompts to try, pricing, and the check habit.
 - [New to Muse](https://museplaybooks.com/#new-to-muse): what Muse is, what a playbook and a skill are, how to get access, 4 steps to a first useful result.
 - [Start here in 10 minutes](https://museplaybooks.com/#fast-start): pick a lane, learn playbook vs skill, run one playbook and ship one thing.
 - [Weekly Letter](https://museplaybooks.com/#weekly-letter): Have your AI work for you. The prompt that works, what worked, what did not, and the workaround, in two minutes. Free to join.
