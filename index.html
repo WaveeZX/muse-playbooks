@@ -256,7 +256,16 @@ footer .wrap{padding-bottom:20px}
  nav.main a[aria-current="page"]{background:var(--accent);color:var(--accent-ink)}
  nav.main a[aria-current="page"]::after{color:var(--accent-ink)}
  table,thead,tbody,tr,td{display:block;width:100%} thead{display:none} tr{background:var(--surface);border-top:1px solid var(--line);padding:10px 6px} td{border:none;padding:7px 14px} td::before{content:attr(data-label);display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint)} td:first-child{font-size:17px} td:first-child::before{display:none}}
-@media(max-width:420px){nav.main{gap:0;padding:6px}nav.main a{padding:9px 13px}}</style>
+@media(max-width:420px){nav.main{gap:0;padding:6px}nav.main a{padding:9px 13px}}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.compare-col{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 20px}
+.compare-col h4{margin:0 0 12px;font-family:var(--font-display);font-size:18px}
+.compare-col ul{margin:0;padding-left:20px;display:grid;gap:12px}
+.compare-col li{margin:0;line-height:1.55}
+.prompt-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:18px 0 22px}
+.prompt-card pre{white-space:pre-wrap;overflow-wrap:break-word;word-break:break-word;font-family:monospace;font-size:13px;line-height:1.6;margin:0;max-width:100%;box-sizing:border-box}
+@media(max-width:640px){.compare{grid-template-columns:1fr}.compare-col{padding:16px}.callout.compare-card,.prompt-card{padding:16px}.prompt-card pre{font-size:12px}}
+</style>
 </head>
 <body>
 <canvas id="particles" aria-hidden="true"></canvas>
@@ -453,7 +462,76 @@ Menu
 </div></main>
 
 <!-- JOB HUNT -->
-<main class="view" id="view-pb-job"><a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Career · November 10, 2026</p><h2>Job Hunt — Any Work Type</h2><p class="lead">Applying one job at a time is slow, and guessing on applications is how good roles get lost. One week we tested a system that sets your floor first, then checks every application before it goes out. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=career">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="callout"><strong>No money promise</strong><p style="color:var(--muted);margin:0">Income figures on this site are typical ranges for general information, not a promise of earnings.</p></div><div class="btns"><a class="btn primary" href="#weekly-letter">Join the letter — free</a><a class="btn" href="#/playbooks">Back to all playbooks</a></div></main>
+<main class="view" id="view-pb-job"><a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Career · November 10, 2026</p><h2>Job Hunt — Any Work Type</h2><p class="lead">Applying one job at a time is slow, and guessing on applications is how good roles get lost. One week we tested a system that sets your floor first, then checks every application before it goes out. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=career">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="callout"><strong>No money promise</strong><p style="color:var(--muted);margin:0">Income figures on this site are typical ranges for general information, not a promise of earnings.</p></div>
+<h3>The problem</h3>
+<p>Job boards reward whoever applies first, but applying by hand eats your day. You open the same three sites, read the same listings, fill the same form, and half the roles are a bad fit anyway. The work is not finding jobs, it is sorting the good ones from the noise and getting a clean application out before the pile grows.</p>
+<h3>Old way vs new way</h3>
+<div class="callout compare-card">
+<div class="compare">
+<div class="compare-col"><h4>Old way</h4>
+<ul>
+<li>open three boards by hand</li>
+<li>read every listing yourself</li>
+<li>fill the same form again and again</li>
+<li>guess at screening questions</li>
+<li>lose track of what you applied to.</li>
+</ul>
+</div>
+<div class="compare-col"><h4>New way</h4>
+<ul>
+<li>one prompt searches all three</li>
+<li>each role ranked against your resume</li>
+<li>standing answers reused with QC first</li>
+<li>unknown question stops the run</li>
+<li>email checked first so no double applies.</li>
+</ul>
+</div>
+</div>
+</div>
+<h3>The prompt that works</h3>
+<p>Copy this, word for word. Fill in the brackets with your own details.</p>
+<div class="prompt-card"><pre>Every weekday, search LinkedIn, Indeed, and Monster for full-time, 100 percent remote [your role] jobs with a posted salary starting at $90,000 or more. Rank each job against my resume: [paste your resume here, or link the file].
+
+Only keep roles that are a real match for my skills and experience. Before you apply to anything, check my email for a prior application to the same company or role, and skip it if I already applied.
+
+For each role you keep, QC it first: name, contact info, work history, education, salary, resume version, and job title and company must all match. Never invent a claim and never guess a screening answer. If a screening question has no answer on file, stop and ask me.
+
+Skip any application site that does not offer Google sign-in, LinkedIn sign-in, or a guest application, unless all three hold: the job was posted less than 1 day ago, I am a 90 percent or higher match, and the posted salary starts at $100,000 or more.
+
+Apply to at most 5 roles per run, none if none qualify. Do every step you can yourself, including clicking verification checks and the Apply button. Only stop for a password, a code I must enter, or a missing required answer. After each run, report what you applied to, what you skipped, and why.</pre></div>
+<h3>What worked</h3>
+<ul>
+<li>Search all three boards in one run, LinkedIn, Indeed, and Monster together. One board alone misses roles.</li>
+<li>A hard salary floor, $90,000, with a preference for $100,000 plus. The floor does the first cut before you read anything.</li>
+<li>Rank against the resume before applying. A role that looks close can fail on one requirement, and that is a skip, not a stretch.</li>
+<li>Check email for a prior application first. Double applying to the same company looks careless and wastes a slot.</li>
+<li>Keep standing answers on file for the questions that repeat on every form, like text message consent. Answer once, reuse it, never re-ask.</li>
+<li>Let Muse do every step it can, including clicking verification checks and the Apply button. Only stop for a password, a code you must enter, or a missing required answer.</li>
+</ul>
+<h3>What did not work</h3>
+<ul>
+<li>Claiming a form was filled or saved without live proof. One application page looked done and was still empty when it was checked. No confirmation, no count.</li>
+<li>Retrying a login the site already rejected. A login that bounces once needs a password fix, not a second account and not another try.</li>
+<li>Guessing a screening answer to unblock a form. One wrong guess can disqualify you, and it is worse than waiting for the real answer.</li>
+<li>Chasing manager seats when the target is a maker seat. Manager postings screen on a degree and a formal cert not yet held, so they burn the run.</li>
+<li>Creating an account with a password just to apply, when the portal rule does not hold. Skip it and log the reason.</li>
+</ul>
+<h3>The workarounds, in order</h3>
+<ol>
+<li>Search, rank against the resume, check email for a prior application.</li>
+<li>Apply only to roles that pass QC and reach the salary floor.</li>
+<li>If a portal needs an account and the portal rule does not hold, skip it and log the reason.</li>
+<li>If a screening question is not covered by your standing answers, stop and report it. Do not guess.</li>
+<li>If a sign-in expires mid-form, restart only when you are ready to sign in again. Do not count it as applied.</li>
+<li>If a role is an 80 percent or higher match and fully remote, flag it first, even if it is blocked. A top match must not sit quietly in a blocked list.</li>
+<li>After the run, report applied, skipped, and blocked, with one line each on why.</li>
+</ol>
+<h3>If you are not job hunting</h3>
+<p>Same pattern, any repeat application. Grants, vendor onboarding, certification renewals, any form you fill more than twice. One prompt with your floor, your must-haves, and your standing answers, then a check for duplicates before you submit, then a report of what went out and what got skipped. The rule that travels is the QC step: never let the tool say done without proof it went through.</p>
+<h3>What this saves you</h3>
+<p>The daily slog of opening three boards, reading the same listings, and filling the same form by hand, plus the quiet cost of a sloppy application, a double apply, or a guessed answer that kills a good role.</p>
+<div class="callout"><strong>Want the latest on this lane?</strong><p style="color:var(--muted);margin:0">The full method above is free on this page. The weekly letter adds the latest news on this lane, occasional tips, and first notice if something changes or breaks.</p></div>
+<div class="btns"><a class="btn primary" href="#weekly-letter">Join the letter — free</a><a class="btn" href="#/playbooks">Back to all playbooks</a></div></main>
 
 <!-- KDP -->
 <main class="view" id="view-pb-kdp"><a class="back" href="#/playbooks">← All playbooks</a><p class="kicker" style="margin-top:16px">Playbook · Publishing · November 10, 2026</p><h2>KDP Puzzle Books</h2><p class="lead">Most puzzle books fail before they are built, on the theme, not the puzzles. We tested one theme first, then built. The full method is free on the site. The letter is for the latest news on this lane, occasional tips, and if something changes or breaks, subscribers are notified first. <a class="back" href="#/tasks?filter=puzzle">See the free method</a> · <a class="back" href="#weekly-letter">Join the letter</a></p><div class="callout"><strong>No money promise</strong><p style="color:var(--muted);margin:0">Income figures on this site are typical ranges for general information, not a promise of earnings.</p></div><div class="btns"><a class="btn primary" href="#weekly-letter">Join the letter — free</a><a class="btn" href="#/playbooks">Back to all playbooks</a></div></main>
